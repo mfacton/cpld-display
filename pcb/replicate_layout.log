@@ -1,0 +1,127 @@
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 392:Plugin executed on: 'linux'
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 393:Plugin executed with python version: '3.12.3 (main, Jul 31 2024, 17:43:48) [GCC 13.2.0]'
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 394:KiCad build version: 8.0.4-8.0.4-0~ubuntu24.04.1
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 395:Plugin version: 3.0.3
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 396:Frame repr: <wx._core.Frame object at 0x7ab9e2ff7e30>
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 420:Preparing replicator with SW2 as a reference
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.replicate_layout 117:getting a list of all footprints on board
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 468:source anchor footprint is 'SW2'
+Located on: ['Button2']
+With filenames: ['button.kicad_sch']
+With sheet_id:['Button2']
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 475:Corresponding footprints are 
+[('SW3', ['Button3']), ('SW2', ['Button2']), ('SW1', ['Button1'])]
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 487:Showing dialog
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.replicate_layout 472:constructing a list of sheets suitable for replication on level:'Button2', file:'button.kicad_sch'
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.replicate_layout 509:suitable sheets are:[['Button1'], ['Button3']]
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1507:Level selected: ['Button2']
+09-05 00:24:03 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1331:Filtering list of tracks
+09-05 00:24:04 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 493:Toolbar position: wx.Point(2206, 129)
+09-05 00:24:04 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 498:Dialog position: wx.Point(1767, 129)
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 472:constructing a list of sheets suitable for replication on level:'Button2', file:'button.kicad_sch'
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 509:suitable sheets are:[['Button1'], ['Button3']]
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 240:Replicating layout
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 288:Starting replication of sheets: [['Button1'], ['Button3']]
+on level: ['Button2']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+09-05 00:24:05 root 332:updating GUI message: 'Preparing for replication'
+09-05 00:24:05 root 337:updating GUI with: 0
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 358:Getting the list of source footprints
+09-05 00:24:05 root 337:updating GUI with: 0
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 368:Getting the list of all the remaining footprints
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 375:Getting source tracks
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1331:Filtering list of tracks
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 379:Getting source zones
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 383:Getting source text items
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 387:Getting source drawing items
+09-05 00:24:05 root 332:updating GUI message: 'Replicating footprints'
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 861:Replicating footprints
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['Button1']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9e534ce4-3eb2-4888-9749-6390503d9160
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:a5fe07b1-f303-4b54-b4ad-c751292b440e
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17f14270-7c52-423d-bc29-75bc3675e375
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:e26dd51b-4510-4bb2-977d-31838a2e2e14
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:271ea90a-8afd-4775-8343-345ce6a6d838
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:25c5fbbd-30b4-43dd-be1b-e12db1afd39f
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:744ab36f-7c24-4406-93b9-43b0cee85d73
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:cc3ba4f9-08b0-4cb4-a60a-fd491347580e
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:a1f6074d-cee3-482c-964c-c1027d69434b
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:feea2877-14c0-4769-b88f-bcab39d96435
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:fd89d4a7-da8e-42ee-abfd-582263362986
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:cfa85334-6179-4b69-8f85-253903867a24
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:1b908e44-4c4d-481f-bb55-d3d11ff9fb0e
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:4c31476f-c012-41c0-827b-6e658f557f38
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:11dbf27e-c51f-4d58-bde7-2daa30a9deb9
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:226d0bed-689a-4e8f-9f92-44148b3935ec
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:fd922e60-400b-418b-93ee-fcb96966714c
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:a8ebe712-0687-4bf9-8cda-0dc268e63b3d
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:a0f9b608-482d-41ae-9c77-31b1fea07844
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:41da0c8f-fb77-4eec-bada-877b901cd4cd
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:461875e4-109a-4dfa-932a-7c90a18cd748
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:b9e98a94-2c09-4286-bbd8-665c2e381622
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:ee5c69a2-b1e4-457d-a172-ed1a280937d6
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:d7328b45-bf8c-4183-b6f6-6b333f7acb09
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 868:Replicating footprints on sheet ['Button3']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:9e534ce4-3eb2-4888-9749-6390503d9160
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:0dca85d0-493f-4c1d-92c7-6d4e34178d3c
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:17f14270-7c52-423d-bc29-75bc3675e375
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:af7d401e-d5f7-4eef-8c5b-e9fbab744009
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:271ea90a-8afd-4775-8343-345ce6a6d838
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:981a6481-e14e-458b-aa92-45cc0968c608
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:744ab36f-7c24-4406-93b9-43b0cee85d73
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:88b1805b-4079-4b9c-9600-db720b23f408
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:a1f6074d-cee3-482c-964c-c1027d69434b
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:11dac7c8-3ece-4eea-953e-f9936972ea1a
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:fd89d4a7-da8e-42ee-abfd-582263362986
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:2a8e3ed9-8b95-4c4d-956d-f7a8b4d72008
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:1b908e44-4c4d-481f-bb55-d3d11ff9fb0e
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:9f8e3b18-57db-461c-8aa9-3e0330663357
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:11dbf27e-c51f-4d58-bde7-2daa30a9deb9
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:4aab98d5-37b2-4b98-b3b0-c31500e76c90
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:fd922e60-400b-418b-93ee-fcb96966714c
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:fb9d36be-1f5c-4cba-bbb6-bd052a3acce3
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:a0f9b608-482d-41ae-9c77-31b1fea07844
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:ee969cab-7503-4a2a-8636-78a7c4110ba4
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:461875e4-109a-4dfa-932a-7c90a18cd748
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:7192c7e1-cf02-4da9-af80-4fcf4b78bad8
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 985:Src text UUid:ee5c69a2-b1e4-457d-a172-ed1a280937d6
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 986:Dst text UUid:fc069b40-ff15-4796-87e9-56f23f2cf020
+09-05 00:24:05 root 332:updating GUI message: 'Replicating tracks'
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1009:Replicating tracks
+09-05 00:24:05 root 337:updating GUI with: 0
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['Button1']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'CLK'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.50
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'CLK'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.50
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['Button1'] :[('/DATA', '/CLK'), ('GND', 'GND'), ('Net-(R24-Pad1)', 'Net-(R22-Pad1)'), ('+3V3', '+3V3')]
+09-05 00:24:05 root 337:updating GUI with: 50
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1015:Replicating tracks on sheet ['Button3']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'RST'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.64
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'RST'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.64
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['Button3'] :[('+3V3', '+3V3'), ('GND', 'GND'), ('/DATA', '/RST'), ('Net-(R24-Pad1)', 'Net-(R26-Pad1)')]
+09-05 00:24:05 root 332:updating GUI message: 'Replicating zones'
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1079:Replicating zones
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['Button1']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'CLK'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.50
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'CLK'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.50
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['Button1'] :[('/DATA', '/CLK'), ('GND', 'GND'), ('Net-(R24-Pad1)', 'Net-(R22-Pad1)'), ('+3V3', '+3V3')]
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1086:Replicating zones on sheet ['Button3']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'RST'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.64
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 776:Significant difference between src net: ['', 'DATA'] and dst net: ['', 'RST'], with src_net_depth=2, dst_net_depth=2, src_fp_depth=1, dst_fp_depth=1, match level 0.64
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 792:Net pairs for sheet ['Button3'] :[('+3V3', '+3V3'), ('GND', 'GND'), ('/DATA', '/RST'), ('Net-(R24-Pad1)', 'Net-(R26-Pad1)')]
+09-05 00:24:05 root 332:updating GUI message: 'Replicating text'
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1168:Replicating text
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['Button1']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1175:Replicating text on sheet ['Button3']
+09-05 00:24:05 root 332:updating GUI message: 'Replicating drawings'
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1219:Replicating drawings
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['Button1']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1225:Replicating drawings on sheet ['Button3']
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 256:Replication complete
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 259:Letting the user know there are some issues with replicated design
+09-05 00:24:05 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 263:Looks like the design has an exotic connectivity that the plugin might not handle properly
+ Make sure that you check the connectivity around:
+Footprint R27, pad 2
+Footprint C11, pad 1
+Footprint C13, pad 1
+Footprint R23, pad 2
+

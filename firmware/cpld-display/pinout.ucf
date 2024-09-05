@@ -1,0 +1,58 @@
+// INPUTS
+net "clk" loc = "P11";
+net "din" loc = "P12";
+
+net "clk" iostandard = LVCMOS33;
+net "din" iostandard = LVCMOS33;
+
+// OUTPUTS
+// digit 1
+net "d1[0]" loc = "P37";
+net "d1[1]" loc = "P36";
+net "d1[2]" loc = "P35";
+net "d1[3]" loc = "P33";
+net "d1[4]" loc = "P32";
+net "d1[5]" loc = "P27";
+net "d1[6]" loc = "P25";
+
+net "d1[0]" iostandard = LVCMOS33;
+net "d1[1]" iostandard = LVCMOS33;
+net "d1[2]" iostandard = LVCMOS33;
+net "d1[3]" iostandard = LVCMOS33;
+net "d1[4]" iostandard = LVCMOS33;
+net "d1[5]" iostandard = LVCMOS33;
+net "d1[6]" iostandard = LVCMOS33;
+
+// digit 2
+net "d2[0]" loc = "P6";
+net "d2[1]" loc = "P5";
+net "d2[2]" loc = "P34";
+net "d2[3]" loc = "P26";
+net "d2[4]" loc = "P44";
+net "d2[5]" loc = "P39";
+net "d2[6]" loc = "P38";
+
+net "d2[0]" iostandard = LVCMOS33;
+net "d2[1]" iostandard = LVCMOS33;
+net "d2[2]" iostandard = LVCMOS33;
+net "d2[3]" iostandard = LVCMOS33;
+net "d2[4]" iostandard = LVCMOS33;
+net "d2[5]" iostandard = LVCMOS33;
+net "d2[6]" iostandard = LVCMOS33;
+
+// digit 3
+net "d3[0]" loc = "P24";
+net "d3[1]" loc = "P15";
+net "d3[2]" loc = "P14";
+net "d3[3]" loc = "P10";
+net "d3[4]" loc = "P9";
+net "d3[5]" loc = "P8";
+net "d3[6]" loc = "P7";
+
+net "d3[0]" iostandard = LVCMOS33;
+net "d3[1]" iostandard = LVCMOS33;
+net "d3[2]" iostandard = LVCMOS33;
+net "d3[3]" iostandard = LVCMOS33;
+net "d3[4]" iostandard = LVCMOS33;
+net "d3[5]" iostandard = LVCMOS33;
+net "d3[6]" iostandard = LVCMOS33;
