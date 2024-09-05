@@ -1,0 +1,30 @@
+ise            - Project Navigator
+xps            - EDK Platform Studio
+planAhead      - PlanAhead
+fpga_editor    - FPGA editor
+coregen        - Core Generator
+timingan       - Timing Analyzer
+smartxplorer   - SmartXplorer
+sysgen         - System Generator
+analyzer       - Chipscope Analyzer
+
+fix HOST ID Issue: https://support.xilinx.com/s/article/60510
+use ifconfig to get ethernet address (wlp0s20f3)
+
+ISE is the design suite for older xilinx fpgas
+Vivado is the design suite for newer xilinx fpgas
+
+start ise by sourcing folder:
+source /opt/Xilinx/Vivado/2017.2/settings64.sh
+
+US Commercial is almost exclusively Verilog
+
+Vivado projects should use Verilog
+Legacy and ISE are better suited for VHDL
+
+XC2 is the cool-runner-2 and can be programmed with ISE
+
+Selecting ISim at the moment because it is the default built in simulator
+
+Use VHDL-93 source analysis as it is better for legacy ISE support
+

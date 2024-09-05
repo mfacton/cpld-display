@@ -1,0 +1,11 @@
+spartan-6 X9 fpga, speed class -2
+programming pins for it (or usb programmer)
+programmer also delivers power
+emmc 8GB
+DDR2 64x16
+ethernet port
+hdmi port
+audio jack
+2 usb ports
+onboard shift registers with leds or something (possibly 7 segment display)
+onboard leds
