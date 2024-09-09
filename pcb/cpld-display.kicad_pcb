@@ -2307,7 +2307,7 @@
 		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "LED")
 		(property "Reference" "D14"
-			(at 2.000001 0 360)
+			(at 2.000001 0 0)
 			(layer "F.SilkS")
 			(uuid "2cd69e84-a5a0-4aeb-9e0a-a6291f6d6a2a")
 			(effects
@@ -2318,7 +2318,7 @@
 			)
 		)
 		(property "Value" "LEDR"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "bb5e199f-20c6-4181-91db-ff6eaadef287")
 			(effects
@@ -2506,7 +2506,7 @@
 			(uuid "774ad559-16b0-4c80-a3d9-6a7a957cc9e8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e5e1eb4e-9f03-4c24-9293-f318441bcf23")
 			(effects
@@ -10716,7 +10716,7 @@
 		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "LED")
 		(property "Reference" "D7"
-			(at 2.000001 0 360)
+			(at 2.000001 0 0)
 			(layer "F.SilkS")
 			(uuid "3559fc08-2379-409c-bedb-85101493be27")
 			(effects
@@ -10727,7 +10727,7 @@
 			)
 		)
 		(property "Value" "LEDR"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "d1827aa3-3968-4462-ad84-b51c8332dc35")
 			(effects
@@ -10915,7 +10915,7 @@
 			(uuid "c6ade7ed-01cb-4f47-9c6f-76cd5752dbc0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "60eff8c3-9e21-472a-a3aa-3b1e591be173")
 			(effects
@@ -12240,7 +12240,7 @@
 			)
 		)
 		(property "Value" "Conn_02x03_Odd_Even"
-			(at 1.27 7.41 360)
+			(at 1.27 7.41 0)
 			(layer "F.Fab")
 			(uuid "0c47c334-721e-4ba2-b391-ee3ee8ef8dea")
 			(effects
