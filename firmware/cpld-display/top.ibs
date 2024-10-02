@@ -5,7 +5,7 @@
 [IBIS ver]       3.2
 [File name]      top.ibs
 [File Rev]       0.3
-[Date]           Wed Aug 28 19:28:17 2024
+[Date]           Mon Sep 30 14:48:35 2024
 [Source]         HSPICE simulations 
 [Notes]          Xilinx IBIS models for CoolRunner-II
 |                The available package models are
@@ -76,28 +76,28 @@ C_pkg            0.3500pF   0.3000pF   0.4000pF
 [Pin]  signal_name                        model_name   R_pin   L_pin   C_pin
 |
 11       clk                              LC33S
-14       din                              LC33S
-39       d1<0>                            LC33F
-38       d1<1>                            LC33F
-37       d1<2>                            LC33F
-36       d1<3>                            LC33F
-35       d1<4>                            LC33F
-34       d1<5>                            LC33F
-33       d1<6>                            LC33F
-4        d2<0>                            LC33F
+12       din                              LC33S
+37       d1<0>                            LC33F
+36       d1<1>                            LC33F
+35       d1<2>                            LC33F
+33       d1<3>                            LC33F
+32       d1<4>                            LC33F
+27       d1<5>                            LC33F
+25       d1<6>                            LC33F
+6        d2<0>                            LC33F
 5        d2<1>                            LC33F
-6        d2<2>                            LC33F
-7        d2<3>                            LC33F
-8        d2<4>                            LC33F
-9        d2<5>                            LC33F
-10       d2<6>                            LC33F
-20       d3<0>                            LC33F
-24       d3<1>                            LC33F
-25       d3<2>                            LC33F
-26       d3<3>                            LC33F
-27       d3<4>                            LC33F
-28       d3<5>                            LC33F
-30       d3<6>                            LC33F
+34       d2<2>                            LC33F
+26       d2<3>                            LC33F
+44       d2<4>                            LC33F
+39       d2<5>                            LC33F
+38       d2<6>                            LC33F
+24       d3<0>                            LC33F
+15       d3<1>                            LC33F
+14       d3<2>                            LC33F
+10       d3<3>                            LC33F
+9        d3<4>                            LC33F
+8        d3<5>                            LC33F
+7        d3<6>                            LC33F
 |
 |
 |************************************************************************

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/mfact/Projects/cpld-display/firmware/cpld-display/impact.xsl
+OUTFILE=/home/mfact/Projects/cpld-display/firmware/cpld-display/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/home/mfact/Projects/cpld-display/firmware/cpld-display
+LICENSE=iMPACT
+USER_INFO=iMPACT

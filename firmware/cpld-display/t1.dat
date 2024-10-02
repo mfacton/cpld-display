@@ -1,0 +1,412 @@
+assert111.........
+name = ddddddd..
+assert333.........
+NDEBUG is defined
+__STDC__ is defined
+__MSVC__ is NOT defined
+XPLA_BORLANDC is NOT defined
+
+---------------------
+|  D E F A U L T S  |
+---------------------
+max_pt=28, min_pt=3
+max_fi=32, min_fi=4
+
+-----------------
+|  H E A D E R  |
+-----------------
+#$ MODULE top
+#$ PINS 6 "d2<0>":6 "d1<2>":14 "clk":11 "d3<0>":37 "d2<2>":34 "d1<0>":24 
+#$ PINS 6 "din":12 "d1<1>":15 "d2<1>":5 "d3<1>":36 "d3<2>":35 "d3<3>":33 
+#$ PINS 6 "d1<3>":10 "d2<3>":26 "d1<6>":7 "d1<5>":8 "d1<4>":9 "d2<6>":38 
+#$ PINS 5 "d2<5>":39 "d2<4>":44 "d3<6>":25 "d3<5>":27 "d3<4>":32 
+
+--------------------------------------
+|  P I N    T a b l e    [count=23]  |
+--------------------------------------
+ d3<6> d1<6> d2<1> d1<3> d2<6> d3<1> d1<0> d3<4> d2<3> din d1<5> d2<0> clk d1<2> d2<5> 
+ d3<2> d3<5> d2<2> d1<4> d1<1> d3<0> d2<4> d3<3>
+
+------------------------------------------
+|  P I N    E q n l i s t    [count=23]  |
+------------------------------------------
+d2<0> (fi=2): (d2<0>.D/N_PZ_0, net=top) (d2<0>.CLK/N_PZ_1, net=top) 
+d1<2> (fi=2): (d1<2>.D/N_PZ_8, net=top) (d1<2>.CLK/N_PZ_9, net=top) 
+clk (fi=0): 
+d3<0> (fi=2): (d3<0>.D/N_PZ_2, net=top) (d3<0>.CLK/N_PZ_3, net=top) 
+d2<2> (fi=2): (d2<2>.D/N_PZ_12, net=top) (d2<2>.CLK/N_PZ_13, net=top) 
+d1<0> (fi=2): (d1<0>.D/N_PZ_4, net=top) (d1<0>.CLK/N_PZ_5, net=top) 
+din (fi=0): 
+d1<1> (fi=2): (d1<1>.D/N_PZ_6, net=top) (d1<1>.CLK/N_PZ_7, net=top) 
+d2<1> (fi=2): (d2<1>.D/N_PZ_10, net=top) (d2<1>.CLK/N_PZ_11, net=top) 
+d3<1> (fi=2): (d3<1>.D/N_PZ_14, net=top) (d3<1>.CLK/N_PZ_15, net=top) 
+d3<2> (fi=2): (d3<2>.D/N_PZ_16, net=top) (d3<2>.CLK/N_PZ_17, net=top) 
+d3<3> (fi=2): (d3<3>.D/N_PZ_18, net=top) (d3<3>.CLK/N_PZ_19, net=top) 
+d1<3> (fi=2): (d1<3>.D/N_PZ_20, net=top) (d1<3>.CLK/N_PZ_21, net=top) 
+d2<3> (fi=2): (d2<3>.D/N_PZ_22, net=top) (d2<3>.CLK/N_PZ_23, net=top) 
+d1<6> (fi=0): (d1<6>/N_PZ_24, net=top) 
+d1<5> (fi=0): (d1<5>/N_PZ_25, net=top) 
+d1<4> (fi=0): (d1<4>/N_PZ_26, net=top) 
+d2<6> (fi=0): (d2<6>/N_PZ_27, net=top) 
+d2<5> (fi=0): (d2<5>/N_PZ_28, net=top) 
+d2<4> (fi=0): (d2<4>/N_PZ_29, net=top) 
+d3<6> (fi=0): (d3<6>/N_PZ_30, net=top) 
+d3<5> (fi=0): (d3<5>/N_PZ_31, net=top) 
+d3<4> (fi=0): (d3<4>/N_PZ_32, net=top) 
+
+-------------------------------------------
+|  N O D E    E q n l i s t    [count=0]  |
+-------------------------------------------
+
+---------------------------------
+|  D a t a   S t r u c t u r e  |
+---------------------------------
+PI ( 11) =  d1<2>.Q clk d2<2>.Q din d1<0>.Q d1<1>.Q d2<0>.Q d2<1>.Q d3<0>.Q d3<1>.Q 
+            d3<2>.Q
+
+PO ( 33) =  d2<0>.D d2<0>.CLK d3<0>.D d3<0>.CLK d1<0>.D d1<0>.CLK d1<1>.D d1<1>.CLK 
+            d1<2>.D d1<2>.CLK d2<1>.D d2<1>.CLK d2<2>.D d2<2>.CLK d3<1>.D d3<1>.CLK 
+            d3<2>.D d3<2>.CLK d3<3>.D d3<3>.CLK d1<3>.D d1<3>.CLK d2<3>.D d2<3>.CLK 
+            d1<6> d1<5> d1<4> d2<6> d2<5> d2<4> d3<6> d3<5> d3<4>
+
+INT = ( 33) N_PZ_0 N_PZ_1 N_PZ_2 N_PZ_3 N_PZ_4 N_PZ_5 N_PZ_6 N_PZ_7 N_PZ_8 N_PZ_9 
+            N_PZ_10 N_PZ_11 N_PZ_12 N_PZ_13 N_PZ_14 N_PZ_15 N_PZ_16 N_PZ_17 N_PZ_18 
+            N_PZ_19 N_PZ_20 N_PZ_21 N_PZ_22 N_PZ_23 N_PZ_24 N_PZ_25 N_PZ_26 N_PZ_27 
+            N_PZ_28 N_PZ_29 N_PZ_30 N_PZ_31 N_PZ_32
+
+PINT= (  0)
+
+AINT= ( 33) N_PZ_0 N_PZ_1 N_PZ_2 N_PZ_3 N_PZ_4 N_PZ_5 N_PZ_6 N_PZ_7 N_PZ_8 N_PZ_9 
+            N_PZ_10 N_PZ_11 N_PZ_12 N_PZ_13 N_PZ_14 N_PZ_15 N_PZ_16 N_PZ_17 N_PZ_18 
+            N_PZ_19 N_PZ_20 N_PZ_21 N_PZ_22 N_PZ_23 N_PZ_24 N_PZ_25 N_PZ_26 N_PZ_27 
+            N_PZ_28 N_PZ_29 N_PZ_30 N_PZ_31 N_PZ_32
+
+
+----------------------------
+|  D F S    N e t w o r k  |
+----------------------------
+d1<2>.Q N_PZ_0 d2<0>.D clk N_PZ_1 d2<0>.CLK d2<2>.Q N_PZ_2 d3<0>.D N_PZ_3 d3<0>.CLK  
+din N_PZ_4 d1<0>.D N_PZ_5 d1<0>.CLK d1<0>.Q N_PZ_6 d1<1>.D N_PZ_7 d1<1>.CLK d1<1>.Q  
+N_PZ_8 d1<2>.D N_PZ_9 d1<2>.CLK d2<0>.Q N_PZ_10 d2<1>.D N_PZ_11 d2<1>.CLK d2<1>.Q  
+N_PZ_12 d2<2>.D N_PZ_13 d2<2>.CLK d3<0>.Q N_PZ_14 d3<1>.D N_PZ_15 d3<1>.CLK d3<1>.Q  
+N_PZ_16 d3<2>.D N_PZ_17 d3<2>.CLK d3<2>.Q N_PZ_18 d3<3>.D N_PZ_19 d3<3>.CLK N_PZ_20  
+d1<3>.D N_PZ_21 d1<3>.CLK N_PZ_22 d2<3>.D N_PZ_23 d2<3>.CLK N_PZ_24 d1<6> N_PZ_25  
+d1<5> N_PZ_26 d1<4> N_PZ_27 d2<6> N_PZ_28 d2<5> N_PZ_29 d2<4> N_PZ_30 d3<6> N_PZ_31  
+d3<5> N_PZ_32 d3<4> 
+
+                                  Short Name                 Collapsible
+          Name       Base   Ext   | TypePolOld pt/th fi/FI fo | min          Pair        pxapin
+       d1<2>.Q      d1<2>    .Q   a   PI  -  -  -| -  -| -  2 -   -             -             -
+           clk        clk         b   PI  -  -  -| -  -| - 12 -   -             -             -
+       d2<2>.Q      d2<2>    .Q   c   PI  -  -  -| -  -| -  2 -   -             -             -
+           din        din         d   PI  -  -  -| -  -| -  1 -   -             -             -
+       d1<0>.Q      d1<0>    .Q   e   PI  -  -  -| -  -| -  1 -   -             -             -
+       d1<1>.Q      d1<1>    .Q   f   PI  -  -  -| -  -| -  1 -   -             -             -
+       d2<0>.Q      d2<0>    .Q   g   PI  -  -  -| -  -| -  1 -   -             -             -
+       d2<1>.Q      d2<1>    .Q   h   PI  -  -  -| -  -| -  1 -   -             -             -
+       d3<0>.Q      d3<0>    .Q   i   PI  -  -  -| -  -| -  1 -   -             -             -
+       d3<1>.Q      d3<1>    .Q   j   PI  -  -  -| -  -| -  1 -   -             -             -
+       d3<2>.Q      d3<2>    .Q   k   PI  -  -  -| -  -| -  1 -   -             -             -
+        N_PZ_0     N_PZ_0     -  s0 AINT  -  -  1|28  1|32  1 -   -       d2<0>.D             -
+        N_PZ_1     N_PZ_1     -  t0 AINT  -  -  1|28  1|32  1 -   -     d2<0>.CLK             -
+        N_PZ_2     N_PZ_2     -  u0 AINT  -  -  1|28  1|32  1 -   -       d3<0>.D             -
+        N_PZ_3     N_PZ_3     -  v0 AINT  -  -  1|28  1|32  1 -   -     d3<0>.CLK             -
+        N_PZ_4     N_PZ_4     -  w0 AINT  -  -  1|28  1|32  1 -   -       d1<0>.D             -
+        N_PZ_5     N_PZ_5     -  x0 AINT  -  -  1|28  1|32  1 -   -     d1<0>.CLK             -
+        N_PZ_6     N_PZ_6     -  y0 AINT  -  -  1|28  1|32  1 -   -       d1<1>.D             -
+        N_PZ_7     N_PZ_7     -  z0 AINT  -  -  1|28  1|32  1 -   -     d1<1>.CLK             -
+        N_PZ_8     N_PZ_8     -  a1 AINT  -  -  1|28  1|32  1 -   -       d1<2>.D             -
+        N_PZ_9     N_PZ_9     -  b1 AINT  -  -  1|28  1|32  1 -   -     d1<2>.CLK             -
+       N_PZ_10    N_PZ_10     -  c1 AINT  -  -  1|28  1|32  1 -   -       d2<1>.D             -
+       N_PZ_11    N_PZ_11     -  d1 AINT  -  -  1|28  1|32  1 -   -     d2<1>.CLK             -
+       N_PZ_12    N_PZ_12     -  e1 AINT  -  -  1|28  1|32  1 -   -       d2<2>.D             -
+       N_PZ_13    N_PZ_13     -  f1 AINT  -  -  1|28  1|32  1 -   -     d2<2>.CLK             -
+       N_PZ_14    N_PZ_14     -  g1 AINT  -  -  1|28  1|32  1 -   -       d3<1>.D             -
+       N_PZ_15    N_PZ_15     -  h1 AINT  -  -  1|28  1|32  1 -   -     d3<1>.CLK             -
+       N_PZ_16    N_PZ_16     -  i1 AINT  -  -  1|28  1|32  1 -   -       d3<2>.D             -
+       N_PZ_17    N_PZ_17     -  j1 AINT  -  -  1|28  1|32  1 -   -     d3<2>.CLK             -
+       N_PZ_18    N_PZ_18     -  k1 AINT  -  -  1|28  1|32  1 -   -       d3<3>.D             -
+       N_PZ_19    N_PZ_19     -  l1 AINT  -  -  1|28  1|32  1 -   -     d3<3>.CLK             -
+       N_PZ_20    N_PZ_20     -  m1 AINT  -  -  1|28  1|32  1 -   -       d1<3>.D             -
+       N_PZ_21    N_PZ_21     -  n1 AINT  -  -  1|28  1|32  1 -   -     d1<3>.CLK             -
+       N_PZ_22    N_PZ_22     -  o1 AINT  -  -  1|28  1|32  1 -   -       d2<3>.D             -
+       N_PZ_23    N_PZ_23     -  p1 AINT  -  -  1|28  1|32  1 -   -     d2<3>.CLK             -
+       N_PZ_24    N_PZ_24     -  q1 AINT  -  -  0|28  0|32  1 -   -         d1<6>             -
+       N_PZ_25    N_PZ_25     -  r1 AINT  -  -  0|28  0|32  1 -   -         d1<5>             -
+       N_PZ_26    N_PZ_26     -  s1 AINT  -  -  0|28  0|32  1 -   -         d1<4>             -
+       N_PZ_27    N_PZ_27     -  t1 AINT  -  -  0|28  0|32  1 -   -         d2<6>             -
+       N_PZ_28    N_PZ_28     -  u1 AINT  -  -  0|28  0|32  1 -   -         d2<5>             -
+       N_PZ_29    N_PZ_29     -  v1 AINT  -  -  0|28  0|32  1 -   -         d2<4>             -
+       N_PZ_30    N_PZ_30     -  w1 AINT  -  -  0|28  0|32  1 -   -         d3<6>             -
+       N_PZ_31    N_PZ_31     -  x1 AINT  -  -  0|28  0|32  1 -   -         d3<5>             -
+       N_PZ_32    N_PZ_32     -  y1 AINT  -  -  0|28  0|32  1 -   -         d3<4>             -
+       d2<0>.D      d2<0>    .D   l   PO  -  -  -| -  -| -  0 -   -        N_PZ_0         d2<0>
+     d2<0>.CLK      d2<0>  .CLK   m   PO  -  -  -| -  -| -  0 -   -        N_PZ_1         d2<0>
+       d3<0>.D      d3<0>    .D   n   PO  -  -  -| -  -| -  0 -   -        N_PZ_2         d3<0>
+     d3<0>.CLK      d3<0>  .CLK   o   PO  -  -  -| -  -| -  0 -   -        N_PZ_3         d3<0>
+       d1<0>.D      d1<0>    .D   p   PO  -  -  -| -  -| -  0 -   -        N_PZ_4         d1<0>
+     d1<0>.CLK      d1<0>  .CLK   q   PO  -  -  -| -  -| -  0 -   -        N_PZ_5         d1<0>
+       d1<1>.D      d1<1>    .D   r   PO  -  -  -| -  -| -  0 -   -        N_PZ_6         d1<1>
+     d1<1>.CLK      d1<1>  .CLK   s   PO  -  -  -| -  -| -  0 -   -        N_PZ_7         d1<1>
+       d1<2>.D      d1<2>    .D   t   PO  -  -  -| -  -| -  0 -   -        N_PZ_8         d1<2>
+     d1<2>.CLK      d1<2>  .CLK   u   PO  -  -  -| -  -| -  0 -   -        N_PZ_9         d1<2>
+       d2<1>.D      d2<1>    .D   v   PO  -  -  -| -  -| -  0 -   -       N_PZ_10         d2<1>
+     d2<1>.CLK      d2<1>  .CLK   w   PO  -  -  -| -  -| -  0 -   -       N_PZ_11         d2<1>
+       d2<2>.D      d2<2>    .D   x   PO  -  -  -| -  -| -  0 -   -       N_PZ_12         d2<2>
+     d2<2>.CLK      d2<2>  .CLK   y   PO  -  -  -| -  -| -  0 -   -       N_PZ_13         d2<2>
+       d3<1>.D      d3<1>    .D   z   PO  -  -  -| -  -| -  0 -   -       N_PZ_14         d3<1>
+     d3<1>.CLK      d3<1>  .CLK  a0   PO  -  -  -| -  -| -  0 -   -       N_PZ_15         d3<1>
+       d3<2>.D      d3<2>    .D  b0   PO  -  -  -| -  -| -  0 -   -       N_PZ_16         d3<2>
+     d3<2>.CLK      d3<2>  .CLK  c0   PO  -  -  -| -  -| -  0 -   -       N_PZ_17         d3<2>
+       d3<3>.D      d3<3>    .D  d0   PO  -  -  -| -  -| -  0 -   -       N_PZ_18         d3<3>
+     d3<3>.CLK      d3<3>  .CLK  e0   PO  -  -  -| -  -| -  0 -   -       N_PZ_19         d3<3>
+       d1<3>.D      d1<3>    .D  f0   PO  -  -  -| -  -| -  0 -   -       N_PZ_20         d1<3>
+     d1<3>.CLK      d1<3>  .CLK  g0   PO  -  -  -| -  -| -  0 -   -       N_PZ_21         d1<3>
+       d2<3>.D      d2<3>    .D  h0   PO  -  -  -| -  -| -  0 -   -       N_PZ_22         d2<3>
+     d2<3>.CLK      d2<3>  .CLK  i0   PO  -  -  -| -  -| -  0 -   -       N_PZ_23         d2<3>
+         d1<6>      d1<6>        j0   PO  -  -  -| -  -| -  0 -   -       N_PZ_24         d1<6>
+         d1<5>      d1<5>        k0   PO  -  -  -| -  -| -  0 -   -       N_PZ_25         d1<5>
+         d1<4>      d1<4>        l0   PO  -  -  -| -  -| -  0 -   -       N_PZ_26         d1<4>
+         d2<6>      d2<6>        m0   PO  -  -  -| -  -| -  0 -   -       N_PZ_27         d2<6>
+         d2<5>      d2<5>        n0   PO  -  -  -| -  -| -  0 -   -       N_PZ_28         d2<5>
+         d2<4>      d2<4>        o0   PO  -  -  -| -  -| -  0 -   -       N_PZ_29         d2<4>
+         d3<6>      d3<6>        p0   PO  -  -  -| -  -| -  0 -   -       N_PZ_30         d3<6>
+         d3<5>      d3<5>        q0   PO  -  -  -| -  -| -  0 -   -       N_PZ_31         d3<5>
+         d3<4>      d3<4>        r0   PO  -  -  -| -  -| -  0 -   -       N_PZ_32         d3<4>
+
+-------------------------------------------------------
+|  PinCnt = 23, NodeCnt = 0, Total = 23, TotalPt = 24 |
+-------------------------------------------------------
+d1<2>.Q,net=top: PI
+  <--0-- 
+  --2--> (N_PZ_0, top) (N_PZ_20, top) 
+clk,net=top: PI
+  <--0-- 
+  --12--> (N_PZ_1, top) (N_PZ_3, top) (N_PZ_5, top) (N_PZ_7, top) (N_PZ_9, top)  
+          (N_PZ_11, top) (N_PZ_13, top) (N_PZ_15, top) (N_PZ_17, top) (N_PZ_19, top)  
+          (N_PZ_21, top) (N_PZ_23, top) 
+d2<2>.Q,net=top: PI
+  <--0-- 
+  --2--> (N_PZ_2, top) (N_PZ_22, top) 
+din,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_4, top) 
+d1<0>.Q,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_6, top) 
+d1<1>.Q,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_8, top) 
+d2<0>.Q,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_10, top) 
+d2<1>.Q,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_12, top) 
+d3<0>.Q,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_14, top) 
+d3<1>.Q,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_16, top) 
+d3<2>.Q,net=top: PI
+  <--0-- 
+  --1--> (N_PZ_18, top) 
+N_PZ_0,net=top: PINT ( d2<0>.D )
+  <--1--  (d1<2>.Q, top)
+  --1--> (d2<0>.D, top) 
+N_PZ_1,net=top: PINT ( d2<0>.CLK )
+  <--1--  (clk, top)
+  --1--> (d2<0>.CLK, top) 
+N_PZ_2,net=top: PINT ( d3<0>.D )
+  <--1--  (d2<2>.Q, top)
+  --1--> (d3<0>.D, top) 
+N_PZ_3,net=top: PINT ( d3<0>.CLK )
+  <--1--  (clk, top)
+  --1--> (d3<0>.CLK, top) 
+N_PZ_4,net=top: PINT ( d1<0>.D )
+  <--1--  (din, top)
+  --1--> (d1<0>.D, top) 
+N_PZ_5,net=top: PINT ( d1<0>.CLK )
+  <--1--  (clk, top)
+  --1--> (d1<0>.CLK, top) 
+N_PZ_6,net=top: PINT ( d1<1>.D )
+  <--1--  (d1<0>.Q, top)
+  --1--> (d1<1>.D, top) 
+N_PZ_7,net=top: PINT ( d1<1>.CLK )
+  <--1--  (clk, top)
+  --1--> (d1<1>.CLK, top) 
+N_PZ_8,net=top: PINT ( d1<2>.D )
+  <--1--  (d1<1>.Q, top)
+  --1--> (d1<2>.D, top) 
+N_PZ_9,net=top: PINT ( d1<2>.CLK )
+  <--1--  (clk, top)
+  --1--> (d1<2>.CLK, top) 
+N_PZ_10,net=top: PINT ( d2<1>.D )
+  <--1--  (d2<0>.Q, top)
+  --1--> (d2<1>.D, top) 
+N_PZ_11,net=top: PINT ( d2<1>.CLK )
+  <--1--  (clk, top)
+  --1--> (d2<1>.CLK, top) 
+N_PZ_12,net=top: PINT ( d2<2>.D )
+  <--1--  (d2<1>.Q, top)
+  --1--> (d2<2>.D, top) 
+N_PZ_13,net=top: PINT ( d2<2>.CLK )
+  <--1--  (clk, top)
+  --1--> (d2<2>.CLK, top) 
+N_PZ_14,net=top: PINT ( d3<1>.D )
+  <--1--  (d3<0>.Q, top)
+  --1--> (d3<1>.D, top) 
+N_PZ_15,net=top: PINT ( d3<1>.CLK )
+  <--1--  (clk, top)
+  --1--> (d3<1>.CLK, top) 
+N_PZ_16,net=top: PINT ( d3<2>.D )
+  <--1--  (d3<1>.Q, top)
+  --1--> (d3<2>.D, top) 
+N_PZ_17,net=top: PINT ( d3<2>.CLK )
+  <--1--  (clk, top)
+  --1--> (d3<2>.CLK, top) 
+N_PZ_18,net=top: PINT ( d3<3>.D )
+  <--1--  (d3<2>.Q, top)
+  --1--> (d3<3>.D, top) 
+N_PZ_19,net=top: PINT ( d3<3>.CLK )
+  <--1--  (clk, top)
+  --1--> (d3<3>.CLK, top) 
+N_PZ_20,net=top: PINT ( d1<3>.D )
+  <--1--  (d1<2>.Q, top)
+  --1--> (d1<3>.D, top) 
+N_PZ_21,net=top: PINT ( d1<3>.CLK )
+  <--1--  (clk, top)
+  --1--> (d1<3>.CLK, top) 
+N_PZ_22,net=top: PINT ( d2<3>.D )
+  <--1--  (d2<2>.Q, top)
+  --1--> (d2<3>.D, top) 
+N_PZ_23,net=top: PINT ( d2<3>.CLK )
+  <--1--  (clk, top)
+  --1--> (d2<3>.CLK, top) 
+N_PZ_24,net=top: PINT ( d1<6> )
+  <--0-- 
+  --1--> (d1<6>, top) 
+N_PZ_25,net=top: PINT ( d1<5> )
+  <--0-- 
+  --1--> (d1<5>, top) 
+N_PZ_26,net=top: PINT ( d1<4> )
+  <--0-- 
+  --1--> (d1<4>, top) 
+N_PZ_27,net=top: PINT ( d2<6> )
+  <--0-- 
+  --1--> (d2<6>, top) 
+N_PZ_28,net=top: PINT ( d2<5> )
+  <--0-- 
+  --1--> (d2<5>, top) 
+N_PZ_29,net=top: PINT ( d2<4> )
+  <--0-- 
+  --1--> (d2<4>, top) 
+N_PZ_30,net=top: PINT ( d3<6> )
+  <--0-- 
+  --1--> (d3<6>, top) 
+N_PZ_31,net=top: PINT ( d3<5> )
+  <--0-- 
+  --1--> (d3<5>, top) 
+N_PZ_32,net=top: PINT ( d3<4> )
+  <--0-- 
+  --1--> (d3<4>, top) 
+d2<0>.D,net=top: PO
+  <--1--  (N_PZ_0, top)
+  --0--> 
+d2<0>.CLK,net=top: PO
+  <--1--  (N_PZ_1, top)
+  --0--> 
+d3<0>.D,net=top: PO
+  <--1--  (N_PZ_2, top)
+  --0--> 
+d3<0>.CLK,net=top: PO
+  <--1--  (N_PZ_3, top)
+  --0--> 
+d1<0>.D,net=top: PO
+  <--1--  (N_PZ_4, top)
+  --0--> 
+d1<0>.CLK,net=top: PO
+  <--1--  (N_PZ_5, top)
+  --0--> 
+d1<1>.D,net=top: PO
+  <--1--  (N_PZ_6, top)
+  --0--> 
+d1<1>.CLK,net=top: PO
+  <--1--  (N_PZ_7, top)
+  --0--> 
+d1<2>.D,net=top: PO
+  <--1--  (N_PZ_8, top)
+  --0--> 
+d1<2>.CLK,net=top: PO
+  <--1--  (N_PZ_9, top)
+  --0--> 
+d2<1>.D,net=top: PO
+  <--1--  (N_PZ_10, top)
+  --0--> 
+d2<1>.CLK,net=top: PO
+  <--1--  (N_PZ_11, top)
+  --0--> 
+d2<2>.D,net=top: PO
+  <--1--  (N_PZ_12, top)
+  --0--> 
+d2<2>.CLK,net=top: PO
+  <--1--  (N_PZ_13, top)
+  --0--> 
+d3<1>.D,net=top: PO
+  <--1--  (N_PZ_14, top)
+  --0--> 
+d3<1>.CLK,net=top: PO
+  <--1--  (N_PZ_15, top)
+  --0--> 
+d3<2>.D,net=top: PO
+  <--1--  (N_PZ_16, top)
+  --0--> 
+d3<2>.CLK,net=top: PO
+  <--1--  (N_PZ_17, top)
+  --0--> 
+d3<3>.D,net=top: PO
+  <--1--  (N_PZ_18, top)
+  --0--> 
+d3<3>.CLK,net=top: PO
+  <--1--  (N_PZ_19, top)
+  --0--> 
+d1<3>.D,net=top: PO
+  <--1--  (N_PZ_20, top)
+  --0--> 
+d1<3>.CLK,net=top: PO
+  <--1--  (N_PZ_21, top)
+  --0--> 
+d2<3>.D,net=top: PO
+  <--1--  (N_PZ_22, top)
+  --0--> 
+d2<3>.CLK,net=top: PO
+  <--1--  (N_PZ_23, top)
+  --0--> 
+d1<6>,net=top: PO
+  <--1--  (N_PZ_24, top)
+  --0--> 
+d1<5>,net=top: PO
+  <--1--  (N_PZ_25, top)
+  --0--> 
+d1<4>,net=top: PO
+  <--1--  (N_PZ_26, top)
+  --0--> 
+d2<6>,net=top: PO
+  <--1--  (N_PZ_27, top)
+  --0--> 
+d2<5>,net=top: PO
+  <--1--  (N_PZ_28, top)
+  --0--> 
+d2<4>,net=top: PO
+  <--1--  (N_PZ_29, top)
+  --0--> 
+d3<6>,net=top: PO
+  <--1--  (N_PZ_30, top)
+  --0--> 
+d3<5>,net=top: PO
+  <--1--  (N_PZ_31, top)
+  --0--> 
+d3<4>,net=top: PO
+  <--1--  (N_PZ_32, top)
+  --0--> 

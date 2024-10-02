@@ -5,162 +5,68 @@
 </td></tr><tr><td>
 ********** Mapped Logic **********
 </td></tr><tr><td>
-FDCPE_bcd10: FDCPE port map (bcd1(0),din,clk,'0','0','1');
 </td></tr><tr><td>
-FDCPE_bcd11: FDCPE port map (bcd1(1),bcd1_D(1),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd1_D(1) <= ((NOT bcd1(0) AND bcd1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd1(0) AND NOT bcd1(3) AND NOT bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND bcd1(1) AND bcd1(2)));
-</td></tr><tr><td>
-FDCPE_bcd12: FDCPE port map (bcd1(2),bcd1_D(2),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd1_D(2) <= ((bcd1(0) AND bcd1(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND NOT bcd1(1) AND bcd1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd1(1) AND NOT bcd1(3) AND NOT bcd1(2)));
-</td></tr><tr><td>
-FDCPE_bcd13: FDCPE port map (bcd1(3),bcd1_D(3),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd1_D(3) <= ((bcd1(0) AND bcd1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND NOT bcd1(1) AND NOT bcd1(3) AND bcd1(2)));
-</td></tr><tr><td>
-FDCPE_bcd20: FDCPE port map (bcd2(0),bcd2_D(0),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd2_D(0) <= NOT (((NOT bcd1(3) AND NOT bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND NOT bcd1(1) AND NOT bcd1(3))));
-</td></tr><tr><td>
-FDCPE_bcd21: FDCPE port map (bcd2(1),bcd2_D(1),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd2_D(1) <= ((NOT bcd2(0) AND bcd2(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd2(0) AND NOT bcd2(3) AND NOT bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND bcd2(1) AND bcd2(2)));
-</td></tr><tr><td>
-FDCPE_bcd22: FDCPE port map (bcd2(2),bcd2_D(2),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd2_D(2) <= ((bcd2(0) AND bcd2(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND NOT bcd2(1) AND bcd2(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd2(1) AND NOT bcd2(3) AND NOT bcd2(2)));
-</td></tr><tr><td>
-FDCPE_bcd23: FDCPE port map (bcd2(3),bcd2_D(3),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd2_D(3) <= ((bcd2(0) AND bcd2(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND NOT bcd2(1) AND NOT bcd2(3) AND bcd2(2)));
-</td></tr><tr><td>
-FDCPE_bcd30: FDCPE port map (bcd3(0),bcd3_D(0),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd3_D(0) <= NOT (((NOT bcd2(3) AND NOT bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND NOT bcd2(1) AND NOT bcd2(3))));
-</td></tr><tr><td>
-FDCPE_bcd31: FDCPE port map (bcd3(1),bcd3_D(1),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd3_D(1) <= ((NOT bcd3(0) AND bcd3(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd3(0) AND NOT bcd3(3) AND NOT bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(0) AND bcd3(1) AND bcd3(2)));
-</td></tr><tr><td>
-FDCPE_bcd32: FDCPE port map (bcd3(2),bcd3_D(2),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd3_D(2) <= ((bcd3(0) AND bcd3(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(0) AND NOT bcd3(1) AND bcd3(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd3(1) AND NOT bcd3(3) AND NOT bcd3(2)));
-</td></tr><tr><td>
-FDCPE_bcd33: FDCPE port map (bcd3(3),bcd3_D(3),clk,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bcd3_D(3) <= ((bcd3(0) AND bcd3(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(0) AND NOT bcd3(1) AND NOT bcd3(3) AND bcd3(2)));
+d1(0) <= NOT ('0');
 </td></tr><tr><td>
 </td></tr><tr><td>
-d1(0) <= NOT ((bcd1(0) AND NOT bcd1(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd1(0) AND bcd1(3) AND NOT bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(1) AND NOT bcd1(3) AND bcd1(2))));
+d1(1) <= NOT ('0');
 </td></tr><tr><td>
 </td></tr><tr><td>
-d1(1) <= NOT ((NOT bcd1(0) AND bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd1(0) AND bcd1(1) AND bcd1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(1) AND NOT bcd1(3) AND bcd1(2))));
+d1(2) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d1(2) <= NOT (((NOT bcd1(0) AND bcd1(3) AND bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd1(1) AND bcd1(3) AND bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND bcd1(1) AND NOT bcd1(3) AND NOT bcd1(2))));
+d1(3) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d1(3) <= NOT (((bcd1(0) AND bcd1(1) AND bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd1(0) AND NOT bcd1(1) AND NOT bcd1(3) AND NOT bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND bcd1(1) AND bcd1(3) AND NOT bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND NOT bcd1(1) AND NOT bcd1(3) AND bcd1(2))));
+d1(4) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d1(4) <= NOT (((bcd1(0) AND NOT bcd1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd1(0) AND NOT bcd1(1) AND NOT bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(1) AND NOT bcd1(3) AND bcd1(2))));
+d1(5) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d1(5) <= NOT ((bcd1(0) AND NOT bcd1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd1(0) AND NOT bcd1(1) AND bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd1(0) AND bcd1(1) AND NOT bcd1(3) AND NOT bcd1(2))));
+d1(6) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d1(6) <= NOT (((NOT bcd1(1) AND NOT bcd1(3) AND NOT bcd1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd1(0) AND bcd1(1) AND NOT bcd1(3) AND bcd1(2))));
+d2(0) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d2(0) <= NOT ((bcd2(0) AND NOT bcd2(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd2(0) AND bcd2(3) AND NOT bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(1) AND NOT bcd2(3) AND bcd2(2))));
+d2(1) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d2(1) <= NOT ((NOT bcd2(0) AND bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd2(0) AND bcd2(1) AND bcd2(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(1) AND NOT bcd2(3) AND bcd2(2))));
+d2(2) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d2(2) <= NOT (((NOT bcd2(0) AND bcd2(3) AND bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd2(1) AND bcd2(3) AND bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND bcd2(1) AND NOT bcd2(3) AND NOT bcd2(2))));
+d2(3) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d2(3) <= NOT (((bcd2(0) AND bcd2(1) AND bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd2(0) AND NOT bcd2(1) AND NOT bcd2(3) AND NOT bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND bcd2(1) AND bcd2(3) AND NOT bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND NOT bcd2(1) AND NOT bcd2(3) AND bcd2(2))));
+d2(4) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d2(4) <= NOT (((bcd2(0) AND NOT bcd2(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd2(0) AND NOT bcd2(1) AND NOT bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(1) AND NOT bcd2(3) AND bcd2(2))));
+d2(5) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d2(5) <= NOT ((bcd2(0) AND NOT bcd2(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd2(0) AND NOT bcd2(1) AND bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd2(0) AND bcd2(1) AND NOT bcd2(3) AND NOT bcd2(2))));
+d2(6) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d2(6) <= NOT (((NOT bcd2(1) AND NOT bcd2(3) AND NOT bcd2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd2(0) AND bcd2(1) AND NOT bcd2(3) AND bcd2(2))));
+d3(0) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d3(0) <= NOT ((bcd3(0) AND NOT bcd3(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd3(0) AND bcd3(3) AND NOT bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(1) AND NOT bcd3(3) AND bcd3(2))));
+d3(1) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d3(1) <= NOT ((NOT bcd3(0) AND bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd3(0) AND bcd3(1) AND bcd3(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(1) AND NOT bcd3(3) AND bcd3(2))));
+d3(2) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d3(2) <= NOT (((NOT bcd3(0) AND bcd3(3) AND bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd3(1) AND bcd3(3) AND bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(0) AND bcd3(1) AND NOT bcd3(3) AND NOT bcd3(2))));
+d3(3) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d3(3) <= NOT (((bcd3(0) AND bcd3(1) AND bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd3(0) AND NOT bcd3(1) AND NOT bcd3(3) AND NOT bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(0) AND bcd3(1) AND bcd3(3) AND NOT bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(0) AND NOT bcd3(1) AND NOT bcd3(3) AND bcd3(2))));
+d3(4) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d3(4) <= NOT (((bcd3(0) AND NOT bcd3(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd3(0) AND NOT bcd3(1) AND NOT bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(1) AND NOT bcd3(3) AND bcd3(2))));
+d3(5) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-d3(5) <= NOT ((bcd3(0) AND NOT bcd3(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((bcd3(0) AND NOT bcd3(1) AND bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bcd3(0) AND bcd3(1) AND NOT bcd3(3) AND NOT bcd3(2))));
-</td></tr><tr><td>
-</td></tr><tr><td>
-d3(6) <= NOT (((NOT bcd3(1) AND NOT bcd3(3) AND NOT bcd3(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bcd3(0) AND bcd3(1) AND NOT bcd3(3) AND bcd3(2))));
+d3(6) <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
 Register Legend:

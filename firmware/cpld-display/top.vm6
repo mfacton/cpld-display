@@ -4,1385 +4,540 @@ NDS_INFO | xbr | 2C64A48 | XC2C64A-7-QFG48
 
 DEVICE | 2C64A | 2C64A48 | 
 
-NETWORK | top | 0 | 0 | 1073758214 | 0
+NETWORK | top | 0 | 0 | 1073823750 | 0
 
-INPUT_INSTANCE | 0 | 0 | NULL | clk_II | top_COPY_0_COPY_0 | 16 | 1 | 1
-INPUT_NODE_TYPE | 0 | 5 | II_IN
-NODE | clk | 5604 | PI | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
-OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-
-MACROCELL_INSTANCE | Inv | d1<0>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | Inv | d1<0>_MC | top_COPY_0_COPY_0 | 256 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d1<0>_MC.Q | 5627 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<0>_MC.Q | d1<0>_MC | 0 | 0 | MC_Q
+NODE | d1<0>_MC.Q | 575 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<0>_MC.Q | d1<0>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d1<0>_MC.SI | d1<0>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d1<0>_MC.SI | d1<0>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d1<0>_MC.D1 | 5606 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1>
+SIGNAL | NODE | d1<0>_MC.D1 | 573 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d1<0>_MC.D2 | 5607 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<3> | IV_FALSE | bcd1<2>
-SPPTERM | 3 | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
+SIGNAL | NODE | d1<0>_MC.D2 | 572 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d1<0>_MC.REG | d1<0>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d1<0>_MC.D | 5605 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.XOR | 0 | 7 | ALU_F
+NODE | d1<0>_MC.D | 571 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d1<0>_MC.Q | 5626 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd1<0>_MC | top_COPY_0_COPY_0 | 1024 | 2 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | din_II/IREG | 5790 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | din_II | 10 | 5 | II_REG
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-
-SRFF_INSTANCE | bcd1<0>_MC.REG | bcd1<0>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | din_II/IREG | 5790 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | din_II | 10 | 5 | II_REG
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd1<0>_MC.Q | 5609 | ? | 0 | 0 | bcd1<0>_MC | NULL | NULL | bcd1<0>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd1<1>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd1<1>_MC.SI | bcd1<1>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd1<1>_MC.D1 | 5615 | ? | 0 | 0 | bcd1<1>_MC | NULL | NULL | bcd1<1>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd1<1>_MC.D2 | 5614 | ? | 0 | 0 | bcd1<1>_MC | NULL | NULL | bcd1<1>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<3>
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<2>
-
-SRFF_INSTANCE | bcd1<1>_MC.REG | bcd1<1>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd1<1>_MC.D | 5613 | ? | 0 | 0 | bcd1<1>_MC | NULL | NULL | bcd1<1>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd1<1>_MC.Q | 5612 | ? | 0 | 0 | bcd1<1>_MC | NULL | NULL | bcd1<1>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd1<3>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd1<3>_MC.SI | bcd1<3>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd1<3>_MC.D1 | 5620 | ? | 0 | 0 | bcd1<3>_MC | NULL | NULL | bcd1<3>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd1<3>_MC.D2 | 5619 | ? | 0 | 0 | bcd1<3>_MC | NULL | NULL | bcd1<3>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<3>
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
-
-SRFF_INSTANCE | bcd1<3>_MC.REG | bcd1<3>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd1<3>_MC.D | 5618 | ? | 0 | 0 | bcd1<3>_MC | NULL | NULL | bcd1<3>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd1<3>_MC.Q | 5617 | ? | 0 | 0 | bcd1<3>_MC | NULL | NULL | bcd1<3>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd1<2>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd1<2>_MC.SI | bcd1<2>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd1<2>_MC.D1 | 5625 | ? | 0 | 0 | bcd1<2>_MC | NULL | NULL | bcd1<2>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd1<2>_MC.D2 | 5624 | ? | 0 | 0 | bcd1<2>_MC | NULL | NULL | bcd1<2>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1>
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_TRUE | bcd1<3>
-SPPTERM | 3 | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-
-SRFF_INSTANCE | bcd1<2>_MC.REG | bcd1<2>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd1<2>_MC.D | 5623 | ? | 0 | 0 | bcd1<2>_MC | NULL | NULL | bcd1<2>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd1<2>_MC.Q | 5622 | ? | 0 | 0 | bcd1<2>_MC | NULL | NULL | bcd1<2>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d1<0>_MC.Q | 574 | ? | 0 | 0 | d1<0>_MC | NULL | NULL | d1<0>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d1<0> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d1<0>_MC.Q | 5627 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<0>_MC.Q | d1<0>_MC | 0 | 0 | MC_Q
+NODE | d1<0>_MC.Q | 575 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<0>_MC.Q | d1<0>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d1<0> | 5628 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<0> | 0 | 6 | OI_OUT
+NODE | d1<0> | 576 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<0> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d1<1>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | Inv | d1<1>_MC | top_COPY_0_COPY_0 | 256 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d1<1>_MC.Q | 5633 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<1>_MC.Q | d1<1>_MC | 0 | 0 | MC_Q
+NODE | d1<1>_MC.Q | 581 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<1>_MC.Q | d1<1>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d1<1>_MC.SI | d1<1>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d1<1>_MC.SI | d1<1>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d1<1>_MC.D1 | 5630 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<2>
+SIGNAL | NODE | d1<1>_MC.D1 | 579 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d1<1>_MC.D2 | 5631 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<3>
-SPPTERM | 3 | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
+SIGNAL | NODE | d1<1>_MC.D2 | 578 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d1<1>_MC.REG | d1<1>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d1<1>_MC.D | 5629 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.XOR | 0 | 7 | ALU_F
+NODE | d1<1>_MC.D | 577 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d1<1>_MC.Q | 5632 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d1<1>_MC.Q | 580 | ? | 0 | 0 | d1<1>_MC | NULL | NULL | d1<1>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d1<1> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d1<1>_MC.Q | 5633 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<1>_MC.Q | d1<1>_MC | 0 | 0 | MC_Q
+NODE | d1<1>_MC.Q | 581 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<1>_MC.Q | d1<1>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d1<1> | 5634 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<1> | 0 | 6 | OI_OUT
+NODE | d1<1> | 582 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<1> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d1<2>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d1<2>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d1<2>_MC.Q | 5639 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<2>_MC.Q | d1<2>_MC | 0 | 0 | MC_Q
+NODE | d1<2>_MC.Q | 587 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<2>_MC.Q | d1<2>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d1<2>_MC.SI | d1<2>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d1<2>_MC.SI | d1<2>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d1<2>_MC.D1 | 5637 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d1<2>_MC.D1 | 585 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d1<2>_MC.D2 | 5636 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<3> | IV_TRUE | bcd1<2>
-SPPTERM | 3 | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<3> | IV_TRUE | bcd1<2>
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
+SIGNAL | NODE | d1<2>_MC.D2 | 584 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d1<2>_MC.REG | d1<2>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d1<2>_MC.D | 5635 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.XOR | 0 | 7 | ALU_F
+NODE | d1<2>_MC.D | 583 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d1<2>_MC.Q | 5638 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d1<2>_MC.Q | 586 | ? | 0 | 0 | d1<2>_MC | NULL | NULL | d1<2>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d1<2> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d1<2>_MC.Q | 5639 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<2>_MC.Q | d1<2>_MC | 0 | 0 | MC_Q
+NODE | d1<2>_MC.Q | 587 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<2>_MC.Q | d1<2>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d1<2> | 5640 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<2> | 0 | 6 | OI_OUT
+NODE | d1<2> | 588 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<2> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d1<3>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d1<3>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d1<3>_MC.Q | 5645 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<3>_MC.Q | d1<3>_MC | 0 | 0 | MC_Q
+NODE | d1<3>_MC.Q | 593 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<3>_MC.Q | d1<3>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d1<3>_MC.SI | d1<3>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d1<3>_MC.SI | d1<3>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d1<3>_MC.D1 | 5643 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d1<3>_MC.D1 | 591 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d1<3>_MC.D2 | 5642 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<2>
-SPPTERM | 4 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<3> | IV_FALSE | bcd1<2>
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
+SIGNAL | NODE | d1<3>_MC.D2 | 590 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d1<3>_MC.REG | d1<3>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d1<3>_MC.D | 5641 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.XOR | 0 | 7 | ALU_F
+NODE | d1<3>_MC.D | 589 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d1<3>_MC.Q | 5644 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d1<3>_MC.Q | 592 | ? | 0 | 0 | d1<3>_MC | NULL | NULL | d1<3>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d1<3> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d1<3>_MC.Q | 5645 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<3>_MC.Q | d1<3>_MC | 0 | 0 | MC_Q
+NODE | d1<3>_MC.Q | 593 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<3>_MC.Q | d1<3>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d1<3> | 5646 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<3> | 0 | 6 | OI_OUT
+NODE | d1<3> | 594 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<3> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d1<4>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d1<4>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d1<4>_MC.Q | 5651 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<4>_MC.Q | d1<4>_MC | 0 | 0 | MC_Q
+NODE | d1<4>_MC.Q | 599 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<4>_MC.Q | d1<4>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d1<4>_MC.SI | d1<4>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d1<4>_MC.SI | d1<4>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d1<4>_MC.D1 | 5649 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d1<4>_MC.D1 | 597 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d1<4>_MC.D2 | 5648 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<3>
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<2>
-SPPTERM | 3 | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
+SIGNAL | NODE | d1<4>_MC.D2 | 596 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d1<4>_MC.REG | d1<4>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d1<4>_MC.D | 5647 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.XOR | 0 | 7 | ALU_F
+NODE | d1<4>_MC.D | 595 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d1<4>_MC.Q | 5650 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d1<4>_MC.Q | 598 | ? | 0 | 0 | d1<4>_MC | NULL | NULL | d1<4>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d1<4> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d1<4>_MC.Q | 5651 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<4>_MC.Q | d1<4>_MC | 0 | 0 | MC_Q
+NODE | d1<4>_MC.Q | 599 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<4>_MC.Q | d1<4>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d1<4> | 5652 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<4> | 0 | 6 | OI_OUT
+NODE | d1<4> | 600 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<4> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d1<5>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d1<5>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d1<5>_MC.Q | 5657 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<5>_MC.Q | d1<5>_MC | 0 | 0 | MC_Q
+NODE | d1<5>_MC.Q | 605 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<5>_MC.Q | d1<5>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d1<5>_MC.SI | d1<5>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d1<5>_MC.SI | d1<5>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d1<5>_MC.D1 | 5654 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<3>
+SIGNAL | NODE | d1<5>_MC.D1 | 603 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d1<5>_MC.D2 | 5655 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1> | IV_TRUE | bcd1<2>
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
+SIGNAL | NODE | d1<5>_MC.D2 | 602 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d1<5>_MC.REG | d1<5>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d1<5>_MC.D | 5653 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.XOR | 0 | 7 | ALU_F
+NODE | d1<5>_MC.D | 601 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d1<5>_MC.Q | 5656 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d1<5>_MC.Q | 604 | ? | 0 | 0 | d1<5>_MC | NULL | NULL | d1<5>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d1<5> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d1<5>_MC.Q | 5657 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<5>_MC.Q | d1<5>_MC | 0 | 0 | MC_Q
+NODE | d1<5>_MC.Q | 605 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<5>_MC.Q | d1<5>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d1<5> | 5658 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<5> | 0 | 6 | OI_OUT
+NODE | d1<5> | 606 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<5> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d1<6>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d1<6>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d1<6>_MC.Q | 5663 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<6>_MC.Q | d1<6>_MC | 0 | 0 | MC_Q
+NODE | d1<6>_MC.Q | 611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<6>_MC.Q | d1<6>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d1<6>_MC.SI | d1<6>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d1<6>_MC.SI | d1<6>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d1<6>_MC.D1 | 5661 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d1<6>_MC.D1 | 609 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d1<6>_MC.D2 | 5660 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-SPPTERM | 4 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
+SIGNAL | NODE | d1<6>_MC.D2 | 608 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d1<6>_MC.REG | d1<6>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d1<6>_MC.D | 5659 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.XOR | 0 | 7 | ALU_F
+NODE | d1<6>_MC.D | 607 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d1<6>_MC.Q | 5662 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d1<6>_MC.Q | 610 | ? | 0 | 0 | d1<6>_MC | NULL | NULL | d1<6>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d1<6> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d1<6>_MC.Q | 5663 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<6>_MC.Q | d1<6>_MC | 0 | 0 | MC_Q
+NODE | d1<6>_MC.Q | 611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d1<6>_MC.Q | d1<6>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d1<6> | 5664 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<6> | 0 | 6 | OI_OUT
+NODE | d1<6> | 612 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d1<6> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d2<0>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d2<0>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d2<0>_MC.Q | 5689 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<0>_MC.Q | d2<0>_MC | 0 | 0 | MC_Q
+NODE | d2<0>_MC.Q | 617 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<0>_MC.Q | d2<0>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d2<0>_MC.SI | d2<0>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d2<0>_MC.SI | d2<0>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d2<0>_MC.D1 | 5666 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1>
+SIGNAL | NODE | d2<0>_MC.D1 | 615 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d2<0>_MC.D2 | 5667 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<3> | IV_FALSE | bcd2<2>
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
+SIGNAL | NODE | d2<0>_MC.D2 | 614 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d2<0>_MC.REG | d2<0>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d2<0>_MC.D | 5665 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.XOR | 0 | 7 | ALU_F
+NODE | d2<0>_MC.D | 613 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d2<0>_MC.Q | 5688 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | Inv+PrldLow | bcd2<0>_MC | top_COPY_0_COPY_0 | 1280 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd2<0>_MC.SI | bcd2<0>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<3> | 5616 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<3>_MC.Q | bcd1<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<2> | 5621 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<2>_MC.Q | bcd1<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<0> | 5608 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<0>_MC.Q | bcd1<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd1<1> | 5611 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd1<1>_MC.Q | bcd1<1>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd2<0>_MC.D1 | 5672 | ? | 0 | 0 | bcd2<0>_MC | NULL | NULL | bcd2<0>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd2<0>_MC.D2 | 5671 | ? | 0 | 0 | bcd2<0>_MC | NULL | NULL | bcd2<0>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3>
-
-SRFF_INSTANCE | bcd2<0>_MC.REG | bcd2<0>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd2<0>_MC.D | 5670 | ? | 0 | 0 | bcd2<0>_MC | NULL | NULL | bcd2<0>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd2<0>_MC.Q | 5669 | ? | 0 | 0 | bcd2<0>_MC | NULL | NULL | bcd2<0>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd2<1>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd2<1>_MC.SI | bcd2<1>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd2<1>_MC.D1 | 5677 | ? | 0 | 0 | bcd2<1>_MC | NULL | NULL | bcd2<1>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd2<1>_MC.D2 | 5676 | ? | 0 | 0 | bcd2<1>_MC | NULL | NULL | bcd2<1>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<3>
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<2>
-
-SRFF_INSTANCE | bcd2<1>_MC.REG | bcd2<1>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd2<1>_MC.D | 5675 | ? | 0 | 0 | bcd2<1>_MC | NULL | NULL | bcd2<1>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd2<1>_MC.Q | 5674 | ? | 0 | 0 | bcd2<1>_MC | NULL | NULL | bcd2<1>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd2<3>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd2<3>_MC.SI | bcd2<3>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd2<3>_MC.D1 | 5682 | ? | 0 | 0 | bcd2<3>_MC | NULL | NULL | bcd2<3>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd2<3>_MC.D2 | 5681 | ? | 0 | 0 | bcd2<3>_MC | NULL | NULL | bcd2<3>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<3>
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
-
-SRFF_INSTANCE | bcd2<3>_MC.REG | bcd2<3>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd2<3>_MC.D | 5680 | ? | 0 | 0 | bcd2<3>_MC | NULL | NULL | bcd2<3>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd2<3>_MC.Q | 5679 | ? | 0 | 0 | bcd2<3>_MC | NULL | NULL | bcd2<3>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd2<2>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd2<2>_MC.SI | bcd2<2>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd2<2>_MC.D1 | 5687 | ? | 0 | 0 | bcd2<2>_MC | NULL | NULL | bcd2<2>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd2<2>_MC.D2 | 5686 | ? | 0 | 0 | bcd2<2>_MC | NULL | NULL | bcd2<2>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1>
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_TRUE | bcd2<3>
-SPPTERM | 3 | IV_TRUE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-
-SRFF_INSTANCE | bcd2<2>_MC.REG | bcd2<2>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd2<2>_MC.D | 5685 | ? | 0 | 0 | bcd2<2>_MC | NULL | NULL | bcd2<2>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd2<2>_MC.Q | 5684 | ? | 0 | 0 | bcd2<2>_MC | NULL | NULL | bcd2<2>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d2<0>_MC.Q | 616 | ? | 0 | 0 | d2<0>_MC | NULL | NULL | d2<0>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d2<0> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d2<0>_MC.Q | 5689 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<0>_MC.Q | d2<0>_MC | 0 | 0 | MC_Q
+NODE | d2<0>_MC.Q | 617 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<0>_MC.Q | d2<0>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d2<0> | 5690 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<0> | 0 | 6 | OI_OUT
+NODE | d2<0> | 618 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<0> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d2<1>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d2<1>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d2<1>_MC.Q | 5695 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<1>_MC.Q | d2<1>_MC | 0 | 0 | MC_Q
+NODE | d2<1>_MC.Q | 623 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<1>_MC.Q | d2<1>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d2<1>_MC.SI | d2<1>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d2<1>_MC.SI | d2<1>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d2<1>_MC.D1 | 5692 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<2>
+SIGNAL | NODE | d2<1>_MC.D1 | 621 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d2<1>_MC.D2 | 5693 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<3>
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
+SIGNAL | NODE | d2<1>_MC.D2 | 620 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d2<1>_MC.REG | d2<1>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d2<1>_MC.D | 5691 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.XOR | 0 | 7 | ALU_F
+NODE | d2<1>_MC.D | 619 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d2<1>_MC.Q | 5694 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d2<1>_MC.Q | 622 | ? | 0 | 0 | d2<1>_MC | NULL | NULL | d2<1>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d2<1> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d2<1>_MC.Q | 5695 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<1>_MC.Q | d2<1>_MC | 0 | 0 | MC_Q
+NODE | d2<1>_MC.Q | 623 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<1>_MC.Q | d2<1>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d2<1> | 5696 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<1> | 0 | 6 | OI_OUT
+NODE | d2<1> | 624 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<1> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d2<2>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d2<2>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d2<2>_MC.Q | 5701 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<2>_MC.Q | d2<2>_MC | 0 | 0 | MC_Q
+NODE | d2<2>_MC.Q | 629 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<2>_MC.Q | d2<2>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d2<2>_MC.SI | d2<2>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d2<2>_MC.SI | d2<2>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d2<2>_MC.D1 | 5699 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d2<2>_MC.D1 | 627 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d2<2>_MC.D2 | 5698 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<3> | IV_TRUE | bcd2<2>
-SPPTERM | 3 | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<3> | IV_TRUE | bcd2<2>
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
+SIGNAL | NODE | d2<2>_MC.D2 | 626 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d2<2>_MC.REG | d2<2>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d2<2>_MC.D | 5697 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.XOR | 0 | 7 | ALU_F
+NODE | d2<2>_MC.D | 625 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d2<2>_MC.Q | 5700 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d2<2>_MC.Q | 628 | ? | 0 | 0 | d2<2>_MC | NULL | NULL | d2<2>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d2<2> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d2<2>_MC.Q | 5701 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<2>_MC.Q | d2<2>_MC | 0 | 0 | MC_Q
+NODE | d2<2>_MC.Q | 629 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<2>_MC.Q | d2<2>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d2<2> | 5702 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<2> | 0 | 6 | OI_OUT
+NODE | d2<2> | 630 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<2> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d2<3>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d2<3>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d2<3>_MC.Q | 5707 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<3>_MC.Q | d2<3>_MC | 0 | 0 | MC_Q
+NODE | d2<3>_MC.Q | 635 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<3>_MC.Q | d2<3>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d2<3>_MC.SI | d2<3>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d2<3>_MC.SI | d2<3>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d2<3>_MC.D1 | 5705 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d2<3>_MC.D1 | 633 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d2<3>_MC.D2 | 5704 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<2>
-SPPTERM | 4 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<3> | IV_FALSE | bcd2<2>
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
+SIGNAL | NODE | d2<3>_MC.D2 | 632 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d2<3>_MC.REG | d2<3>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d2<3>_MC.D | 5703 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.XOR | 0 | 7 | ALU_F
+NODE | d2<3>_MC.D | 631 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d2<3>_MC.Q | 5706 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d2<3>_MC.Q | 634 | ? | 0 | 0 | d2<3>_MC | NULL | NULL | d2<3>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d2<3> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d2<3>_MC.Q | 5707 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<3>_MC.Q | d2<3>_MC | 0 | 0 | MC_Q
+NODE | d2<3>_MC.Q | 635 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<3>_MC.Q | d2<3>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d2<3> | 5708 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<3> | 0 | 6 | OI_OUT
+NODE | d2<3> | 636 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<3> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d2<4>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d2<4>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d2<4>_MC.Q | 5713 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<4>_MC.Q | d2<4>_MC | 0 | 0 | MC_Q
+NODE | d2<4>_MC.Q | 641 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<4>_MC.Q | d2<4>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d2<4>_MC.SI | d2<4>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d2<4>_MC.SI | d2<4>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d2<4>_MC.D1 | 5711 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d2<4>_MC.D1 | 639 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d2<4>_MC.D2 | 5710 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<3>
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<2>
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
+SIGNAL | NODE | d2<4>_MC.D2 | 638 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d2<4>_MC.REG | d2<4>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d2<4>_MC.D | 5709 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.XOR | 0 | 7 | ALU_F
+NODE | d2<4>_MC.D | 637 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d2<4>_MC.Q | 5712 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d2<4>_MC.Q | 640 | ? | 0 | 0 | d2<4>_MC | NULL | NULL | d2<4>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d2<4> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d2<4>_MC.Q | 5713 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<4>_MC.Q | d2<4>_MC | 0 | 0 | MC_Q
+NODE | d2<4>_MC.Q | 641 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<4>_MC.Q | d2<4>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d2<4> | 5714 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<4> | 0 | 6 | OI_OUT
+NODE | d2<4> | 642 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<4> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d2<5>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d2<5>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d2<5>_MC.Q | 5719 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<5>_MC.Q | d2<5>_MC | 0 | 0 | MC_Q
+NODE | d2<5>_MC.Q | 647 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<5>_MC.Q | d2<5>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d2<5>_MC.SI | d2<5>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d2<5>_MC.SI | d2<5>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d2<5>_MC.D1 | 5716 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<3>
+SIGNAL | NODE | d2<5>_MC.D1 | 645 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d2<5>_MC.D2 | 5717 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1> | IV_TRUE | bcd2<2>
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
+SIGNAL | NODE | d2<5>_MC.D2 | 644 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d2<5>_MC.REG | d2<5>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d2<5>_MC.D | 5715 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.XOR | 0 | 7 | ALU_F
+NODE | d2<5>_MC.D | 643 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d2<5>_MC.Q | 5718 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d2<5>_MC.Q | 646 | ? | 0 | 0 | d2<5>_MC | NULL | NULL | d2<5>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d2<5> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d2<5>_MC.Q | 5719 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<5>_MC.Q | d2<5>_MC | 0 | 0 | MC_Q
+NODE | d2<5>_MC.Q | 647 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<5>_MC.Q | d2<5>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d2<5> | 5720 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<5> | 0 | 6 | OI_OUT
+NODE | d2<5> | 648 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<5> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d2<6>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d2<6>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d2<6>_MC.Q | 5725 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<6>_MC.Q | d2<6>_MC | 0 | 0 | MC_Q
+NODE | d2<6>_MC.Q | 653 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<6>_MC.Q | d2<6>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d2<6>_MC.SI | d2<6>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d2<6>_MC.SI | d2<6>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d2<6>_MC.D1 | 5723 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d2<6>_MC.D1 | 651 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d2<6>_MC.D2 | 5722 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-SPPTERM | 4 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
+SIGNAL | NODE | d2<6>_MC.D2 | 650 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d2<6>_MC.REG | d2<6>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d2<6>_MC.D | 5721 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.XOR | 0 | 7 | ALU_F
+NODE | d2<6>_MC.D | 649 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d2<6>_MC.Q | 5724 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d2<6>_MC.Q | 652 | ? | 0 | 0 | d2<6>_MC | NULL | NULL | d2<6>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d2<6> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d2<6>_MC.Q | 5725 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<6>_MC.Q | d2<6>_MC | 0 | 0 | MC_Q
+NODE | d2<6>_MC.Q | 653 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d2<6>_MC.Q | d2<6>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d2<6> | 5726 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<6> | 0 | 6 | OI_OUT
+NODE | d2<6> | 654 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d2<6> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d3<0>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d3<0>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d3<0>_MC.Q | 5751 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<0>_MC.Q | d3<0>_MC | 0 | 0 | MC_Q
+NODE | d3<0>_MC.Q | 659 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<0>_MC.Q | d3<0>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d3<0>_MC.SI | d3<0>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d3<0>_MC.SI | d3<0>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d3<0>_MC.D1 | 5728 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1>
+SIGNAL | NODE | d3<0>_MC.D1 | 657 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d3<0>_MC.D2 | 5729 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<3> | IV_FALSE | bcd3<2>
-SPPTERM | 3 | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
+SIGNAL | NODE | d3<0>_MC.D2 | 656 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d3<0>_MC.REG | d3<0>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d3<0>_MC.D | 5727 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.XOR | 0 | 7 | ALU_F
+NODE | d3<0>_MC.D | 655 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d3<0>_MC.Q | 5750 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | Inv+PrldLow | bcd3<0>_MC | top_COPY_0_COPY_0 | 1280 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd3<0>_MC.SI | bcd3<0>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<3> | 5678 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<3>_MC.Q | bcd2<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<2> | 5683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<2>_MC.Q | bcd2<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<0> | 5668 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<0>_MC.Q | bcd2<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd2<1> | 5673 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd2<1>_MC.Q | bcd2<1>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd3<0>_MC.D1 | 5734 | ? | 0 | 0 | bcd3<0>_MC | NULL | NULL | bcd3<0>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd3<0>_MC.D2 | 5733 | ? | 0 | 0 | bcd3<0>_MC | NULL | NULL | bcd3<0>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3>
-
-SRFF_INSTANCE | bcd3<0>_MC.REG | bcd3<0>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd3<0>_MC.D | 5732 | ? | 0 | 0 | bcd3<0>_MC | NULL | NULL | bcd3<0>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd3<0>_MC.Q | 5731 | ? | 0 | 0 | bcd3<0>_MC | NULL | NULL | bcd3<0>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd3<1>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd3<1>_MC.SI | bcd3<1>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd3<1>_MC.D1 | 5739 | ? | 0 | 0 | bcd3<1>_MC | NULL | NULL | bcd3<1>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd3<1>_MC.D2 | 5738 | ? | 0 | 0 | bcd3<1>_MC | NULL | NULL | bcd3<1>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<3>
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-SPPTERM | 3 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<2>
-
-SRFF_INSTANCE | bcd3<1>_MC.REG | bcd3<1>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd3<1>_MC.D | 5737 | ? | 0 | 0 | bcd3<1>_MC | NULL | NULL | bcd3<1>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd3<1>_MC.Q | 5736 | ? | 0 | 0 | bcd3<1>_MC | NULL | NULL | bcd3<1>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd3<3>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd3<3>_MC.SI | bcd3<3>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd3<3>_MC.D1 | 5744 | ? | 0 | 0 | bcd3<3>_MC | NULL | NULL | bcd3<3>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd3<3>_MC.D2 | 5743 | ? | 0 | 0 | bcd3<3>_MC | NULL | NULL | bcd3<3>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<3>
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
-
-SRFF_INSTANCE | bcd3<3>_MC.REG | bcd3<3>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd3<3>_MC.D | 5742 | ? | 0 | 0 | bcd3<3>_MC | NULL | NULL | bcd3<3>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd3<3>_MC.Q | 5741 | ? | 0 | 0 | bcd3<3>_MC | NULL | NULL | bcd3<3>_MC.REG | 0 | 8 | SRFF_Q
-
-MACROCELL_INSTANCE | PrldLow | bcd3<2>_MC | top_COPY_0_COPY_0 | 1024 | 5 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-
-SIGNAL_INSTANCE | bcd3<2>_MC.SI | bcd3<2>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | bcd3<2>_MC.D1 | 5749 | ? | 0 | 0 | bcd3<2>_MC | NULL | NULL | bcd3<2>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 0 | IV_ZERO
-OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | bcd3<2>_MC.D2 | 5748 | ? | 0 | 0 | bcd3<2>_MC | NULL | NULL | bcd3<2>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1>
-SPPTERM | 3 | IV_FALSE | bcd3<0> | IV_FALSE | bcd3<1> | IV_TRUE | bcd3<3>
-SPPTERM | 3 | IV_TRUE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-
-SRFF_INSTANCE | bcd3<2>_MC.REG | bcd3<2>_MC | 0 | 2 | 1
-INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | bcd3<2>_MC.D | 5747 | ? | 0 | 0 | bcd3<2>_MC | NULL | NULL | bcd3<2>_MC.XOR | 0 | 7 | ALU_F
-INPUT_NODE_TYPE | 1 | 8 | SRFF_C
-NODE | clk_II/FCLK | 5610 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | clk_II | 3 | 5 | II_FCLK
-OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | bcd3<2>_MC.Q | 5746 | ? | 0 | 0 | bcd3<2>_MC | NULL | NULL | bcd3<2>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d3<0>_MC.Q | 658 | ? | 0 | 0 | d3<0>_MC | NULL | NULL | d3<0>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d3<0> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d3<0>_MC.Q | 5751 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<0>_MC.Q | d3<0>_MC | 0 | 0 | MC_Q
+NODE | d3<0>_MC.Q | 659 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<0>_MC.Q | d3<0>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d3<0> | 5752 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<0> | 0 | 6 | OI_OUT
+NODE | d3<0> | 660 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<0> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d3<1>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d3<1>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d3<1>_MC.Q | 5757 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<1>_MC.Q | d3<1>_MC | 0 | 0 | MC_Q
+NODE | d3<1>_MC.Q | 665 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<1>_MC.Q | d3<1>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d3<1>_MC.SI | d3<1>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d3<1>_MC.SI | d3<1>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d3<1>_MC.D1 | 5754 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<2>
+SIGNAL | NODE | d3<1>_MC.D1 | 663 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d3<1>_MC.D2 | 5755 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<3>
-SPPTERM | 3 | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
+SIGNAL | NODE | d3<1>_MC.D2 | 662 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d3<1>_MC.REG | d3<1>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d3<1>_MC.D | 5753 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.XOR | 0 | 7 | ALU_F
+NODE | d3<1>_MC.D | 661 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d3<1>_MC.Q | 5756 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d3<1>_MC.Q | 664 | ? | 0 | 0 | d3<1>_MC | NULL | NULL | d3<1>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d3<1> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d3<1>_MC.Q | 5757 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<1>_MC.Q | d3<1>_MC | 0 | 0 | MC_Q
+NODE | d3<1>_MC.Q | 665 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<1>_MC.Q | d3<1>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d3<1> | 5758 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<1> | 0 | 6 | OI_OUT
+NODE | d3<1> | 666 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<1> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d3<2>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d3<2>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d3<2>_MC.Q | 5763 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<2>_MC.Q | d3<2>_MC | 0 | 0 | MC_Q
+NODE | d3<2>_MC.Q | 671 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<2>_MC.Q | d3<2>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d3<2>_MC.SI | d3<2>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d3<2>_MC.SI | d3<2>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d3<2>_MC.D1 | 5761 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d3<2>_MC.D1 | 669 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d3<2>_MC.D2 | 5760 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<3> | IV_TRUE | bcd3<2>
-SPPTERM | 3 | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<3> | IV_TRUE | bcd3<2>
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
+SIGNAL | NODE | d3<2>_MC.D2 | 668 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d3<2>_MC.REG | d3<2>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d3<2>_MC.D | 5759 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.XOR | 0 | 7 | ALU_F
+NODE | d3<2>_MC.D | 667 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d3<2>_MC.Q | 5762 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d3<2>_MC.Q | 670 | ? | 0 | 0 | d3<2>_MC | NULL | NULL | d3<2>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d3<2> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d3<2>_MC.Q | 5763 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<2>_MC.Q | d3<2>_MC | 0 | 0 | MC_Q
+NODE | d3<2>_MC.Q | 671 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<2>_MC.Q | d3<2>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d3<2> | 5764 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<2> | 0 | 6 | OI_OUT
+NODE | d3<2> | 672 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<2> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d3<3>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d3<3>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d3<3>_MC.Q | 5769 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<3>_MC.Q | d3<3>_MC | 0 | 0 | MC_Q
+NODE | d3<3>_MC.Q | 677 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<3>_MC.Q | d3<3>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d3<3>_MC.SI | d3<3>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d3<3>_MC.SI | d3<3>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d3<3>_MC.D1 | 5767 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d3<3>_MC.D1 | 675 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d3<3>_MC.D2 | 5766 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<2>
-SPPTERM | 4 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<3> | IV_FALSE | bcd3<2>
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
+SIGNAL | NODE | d3<3>_MC.D2 | 674 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d3<3>_MC.REG | d3<3>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d3<3>_MC.D | 5765 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.XOR | 0 | 7 | ALU_F
+NODE | d3<3>_MC.D | 673 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d3<3>_MC.Q | 5768 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d3<3>_MC.Q | 676 | ? | 0 | 0 | d3<3>_MC | NULL | NULL | d3<3>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d3<3> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d3<3>_MC.Q | 5769 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<3>_MC.Q | d3<3>_MC | 0 | 0 | MC_Q
+NODE | d3<3>_MC.Q | 677 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<3>_MC.Q | d3<3>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d3<3> | 5770 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<3> | 0 | 6 | OI_OUT
+NODE | d3<3> | 678 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<3> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d3<4>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d3<4>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d3<4>_MC.Q | 5775 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<4>_MC.Q | d3<4>_MC | 0 | 0 | MC_Q
+NODE | d3<4>_MC.Q | 683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<4>_MC.Q | d3<4>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d3<4>_MC.SI | d3<4>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d3<4>_MC.SI | d3<4>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d3<4>_MC.D1 | 5773 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d3<4>_MC.D1 | 681 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d3<4>_MC.D2 | 5772 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<3>
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<2>
-SPPTERM | 3 | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
+SIGNAL | NODE | d3<4>_MC.D2 | 680 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d3<4>_MC.REG | d3<4>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d3<4>_MC.D | 5771 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.XOR | 0 | 7 | ALU_F
+NODE | d3<4>_MC.D | 679 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d3<4>_MC.Q | 5774 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d3<4>_MC.Q | 682 | ? | 0 | 0 | d3<4>_MC | NULL | NULL | d3<4>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d3<4> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d3<4>_MC.Q | 5775 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<4>_MC.Q | d3<4>_MC | 0 | 0 | MC_Q
+NODE | d3<4>_MC.Q | 683 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<4>_MC.Q | d3<4>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d3<4> | 5776 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<4> | 0 | 6 | OI_OUT
+NODE | d3<4> | 684 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<4> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d3<5>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d3<5>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d3<5>_MC.Q | 5781 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<5>_MC.Q | d3<5>_MC | 0 | 0 | MC_Q
+NODE | d3<5>_MC.Q | 689 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<5>_MC.Q | d3<5>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d3<5>_MC.SI | d3<5>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d3<5>_MC.SI | d3<5>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d3<5>_MC.D1 | 5778 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.SI | 1 | 9 | MC_SI_D1
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<3>
+SIGNAL | NODE | d3<5>_MC.D1 | 687 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d3<5>_MC.D2 | 5779 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1> | IV_TRUE | bcd3<2>
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
+SIGNAL | NODE | d3<5>_MC.D2 | 686 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d3<5>_MC.REG | d3<5>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d3<5>_MC.D | 5777 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.XOR | 0 | 7 | ALU_F
+NODE | d3<5>_MC.D | 685 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d3<5>_MC.Q | 5780 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d3<5>_MC.Q | 688 | ? | 0 | 0 | d3<5>_MC | NULL | NULL | d3<5>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d3<5> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d3<5>_MC.Q | 5781 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<5>_MC.Q | d3<5>_MC | 0 | 0 | MC_Q
+NODE | d3<5>_MC.Q | 689 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<5>_MC.Q | d3<5>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d3<5> | 5782 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<5> | 0 | 6 | OI_OUT
+NODE | d3<5> | 690 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<5> | 0 | 6 | OI_OUT
 
-MACROCELL_INSTANCE | Inv | d3<6>_MC | top_COPY_0_COPY_0 | 256 | 4 | 1
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
+MACROCELL_INSTANCE | NULL | d3<6>_MC | top_COPY_0_COPY_0 | 0 | 0 | 1
 OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
-NODE | d3<6>_MC.Q | 5787 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<6>_MC.Q | d3<6>_MC | 0 | 0 | MC_Q
+NODE | d3<6>_MC.Q | 695 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<6>_MC.Q | d3<6>_MC | 0 | 0 | MC_Q
 
-SIGNAL_INSTANCE | d3<6>_MC.SI | d3<6>_MC | 0 | 4 | 2
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<1> | 5735 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<1>_MC.Q | bcd3<1>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<3> | 5740 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<3>_MC.Q | bcd3<3>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<2> | 5745 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<2>_MC.Q | bcd3<2>_MC | 1 | 0 | MC_UIM
-INPUT_NODE_TYPE | 1 | 100 | NOTYPE
-NODE | bcd3<0> | 5730 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | bcd3<0>_MC.Q | bcd3<0>_MC | 1 | 0 | MC_UIM
+SIGNAL_INSTANCE | d3<6>_MC.SI | d3<6>_MC | 0 | 0 | 2
 OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
-SIGNAL | NODE | d3<6>_MC.D1 | 5785 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.SI | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | d3<6>_MC.D1 | 693 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.SI | 1 | 9 | MC_SI_D1
 SPPTERM | 0 | IV_ZERO
 OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
-SIGNAL | NODE | d3<6>_MC.D2 | 5784 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.SI | 2 | 9 | MC_SI_D2
-SPPTERM | 3 | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-SPPTERM | 4 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
+SIGNAL | NODE | d3<6>_MC.D2 | 692 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
 
 SRFF_INSTANCE | d3<6>_MC.REG | d3<6>_MC | 0 | 1 | 1
 INPUT_NODE_TYPE | 0 | 8 | SRFF_D
-NODE | d3<6>_MC.D | 5783 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.XOR | 0 | 7 | ALU_F
+NODE | d3<6>_MC.D | 691 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.XOR | 0 | 7 | ALU_F
 OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
-NODE | d3<6>_MC.Q | 5786 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.REG | 0 | 8 | SRFF_Q
+NODE | d3<6>_MC.Q | 694 | ? | 0 | 0 | d3<6>_MC | NULL | NULL | d3<6>_MC.REG | 0 | 8 | SRFF_Q
 
 OUTPUT_INSTANCE | 0 | d3<6> | top_COPY_0_COPY_0 | 3 | 1 | 1
 INPUT_NODE_TYPE | 0 | 6 | OI_IN
-NODE | d3<6>_MC.Q | 5787 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<6>_MC.Q | d3<6>_MC | 0 | 0 | MC_Q
+NODE | d3<6>_MC.Q | 695 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | d3<6>_MC.Q | d3<6>_MC | 0 | 0 | MC_Q
 OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
-NODE | d3<6> | 5788 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<6> | 0 | 6 | OI_OUT
-
-INPUT_INSTANCE | 0 | 0 | NULL | din_II | top_COPY_0_COPY_0 | 16 | 1 | 1
-INPUT_NODE_TYPE | 0 | 5 | II_IN
-NODE | din | 5789 | PI | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
-OUTPUT_NODE_TYPE | 10 | 5 | II_REG
-NODE | din_II/IREG | 5790 | ? | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | din_II | 10 | 5 | II_REG
+NODE | d3<6> | 696 | PO | 0 | 0 | top_COPY_0_COPY_0 | NULL | NULL | d3<6> | 0 | 6 | OI_OUT
 
 FB_INSTANCE | FOOBAR1_ | top_COPY_0_COPY_0 | 0 | 0 | 0
-FBPIN | 1 | bcd3<3>_MC | 1 | NULL | 0 | NULL | 0
 FBPIN | 2 | d2<1>_MC | 1 | NULL | 0 | d2<1> | 1 | 5 | 49152
-FBPIN | 4 | bcd1<2>_MC | 1 | NULL | 0 | NULL | 0
-FBPIN | 5 | bcd1<1>_MC | 1 | NULL | 0 | NULL | 0
-FBPIN | 6 | bcd2<0>_MC | 1 | NULL | 0 | NULL | 0
-FBPIN | 7 | bcd1<3>_MC | 1 | NULL | 0 | NULL | 0
-FBPIN | 8 | bcd2<2>_MC | 1 | NULL | 0 | NULL | 0
-FBPIN | 12 | bcd3<2>_MC | 1 | NULL | 0 | NULL | 0 | 47 | 53248
-FBPIN | 13 | bcd3<1>_MC | 1 | NULL | 0 | NULL | 0 | 46 | 51200
-FBPIN | 14 | bcd2<1>_MC | 1 | NULL | 0 | NULL | 0
-FBPIN | 15 | bcd3<0>_MC | 1 | NULL | 0 | NULL | 0
-FBPIN | 16 | bcd2<3>_MC | 1 | NULL | 0 | NULL | 0
 
 FB_INSTANCE | FOOBAR2_ | top_COPY_0_COPY_0 | 0 | 0 | 0
 FBPIN | 1 | d2<0>_MC | 1 | NULL | 0 | d2<0> | 1 | 6 | 49152
-FBPIN | 2 | d3<6>_MC | 1 | NULL | 0 | d3<6> | 1 | 7 | 49152
-FBPIN | 3 | d3<5>_MC | 1 | NULL | 0 | d3<5> | 1 | 8 | 49152
-FBPIN | 4 | d3<4>_MC | 1 | NULL | 0 | d3<4> | 1 | 9 | 49152
-FBPIN | 5 | d3<3>_MC | 1 | NULL | 0 | d3<3> | 1 | 10 | 49152
-FBPIN | 7 | NULL | 0 | clk_II | 1 | NULL | 0 | 11 | 57344
-FBPIN | 8 | bcd1<0>_MC | 1 | din_II | 1 | NULL | 0 | 12 | 57344
-FBPIN | 12 | d3<2>_MC | 1 | NULL | 0 | d3<2> | 1 | 14 | 49152
-FBPIN | 13 | d3<1>_MC | 1 | NULL | 0 | d3<1> | 1 | 15 | 49152
+FBPIN | 2 | d1<6>_MC | 1 | NULL | 0 | d1<6> | 1 | 7 | 49152
+FBPIN | 3 | d1<5>_MC | 1 | NULL | 0 | d1<5> | 1 | 8 | 49152
+FBPIN | 4 | d1<4>_MC | 1 | NULL | 0 | d1<4> | 1 | 9 | 49152
+FBPIN | 5 | d1<3>_MC | 1 | NULL | 0 | d1<3> | 1 | 10 | 49152
+FBPIN | 12 | d1<2>_MC | 1 | NULL | 0 | d1<2> | 1 | 14 | 49152
+FBPIN | 13 | d1<1>_MC | 1 | NULL | 0 | d1<1> | 1 | 15 | 49152
 
 FB_INSTANCE | FOOBAR3_ | top_COPY_0_COPY_0 | 0 | 0 | 0
 FBPIN | 2 | d2<4>_MC | 1 | NULL | 0 | d2<4> | 1 | 44 | 49152
 FBPIN | 5 | d2<5>_MC | 1 | NULL | 0 | d2<5> | 1 | 39 | 49152
 FBPIN | 6 | d2<6>_MC | 1 | NULL | 0 | d2<6> | 1 | 38 | 49152
-FBPIN | 9 | d1<0>_MC | 1 | NULL | 0 | d1<0> | 1 | 37 | 49152
-FBPIN | 10 | d1<1>_MC | 1 | NULL | 0 | d1<1> | 1 | 36 | 49152
-FBPIN | 11 | d1<2>_MC | 1 | NULL | 0 | d1<2> | 1 | 35 | 49152
+FBPIN | 9 | d3<0>_MC | 1 | NULL | 0 | d3<0> | 1 | 37 | 49152
+FBPIN | 10 | d3<1>_MC | 1 | NULL | 0 | d3<1> | 1 | 36 | 49152
+FBPIN | 11 | d3<2>_MC | 1 | NULL | 0 | d3<2> | 1 | 35 | 49152
 FBPIN | 12 | d2<2>_MC | 1 | NULL | 0 | d2<2> | 1 | 34 | 49152
-FBPIN | 14 | d1<3>_MC | 1 | NULL | 0 | d1<3> | 1 | 33 | 49152
-FBPIN | 15 | d1<4>_MC | 1 | NULL | 0 | d1<4> | 1 | 32 | 49152
+FBPIN | 14 | d3<3>_MC | 1 | NULL | 0 | d3<3> | 1 | 33 | 49152
+FBPIN | 15 | d3<4>_MC | 1 | NULL | 0 | d3<4> | 1 | 32 | 49152
 
 FB_INSTANCE | FOOBAR4_ | top_COPY_0_COPY_0 | 0 | 0 | 0
-FBPIN | 10 | d3<0>_MC | 1 | NULL | 0 | d3<0> | 1 | 24 | 49152
-FBPIN | 11 | d1<6>_MC | 1 | NULL | 0 | d1<6> | 1 | 25 | 49152
+FBPIN | 10 | d1<0>_MC | 1 | NULL | 0 | d1<0> | 1 | 24 | 49152
+FBPIN | 11 | d3<6>_MC | 1 | NULL | 0 | d3<6> | 1 | 25 | 49152
 FBPIN | 12 | d2<3>_MC | 1 | NULL | 0 | d2<3> | 1 | 26 | 49152
-FBPIN | 13 | d1<5>_MC | 1 | NULL | 0 | d1<5> | 1 | 27 | 49152
+FBPIN | 13 | d3<5>_MC | 1 | NULL | 0 | d3<5> | 1 | 27 | 49152
 
 FB_INSTANCE | INPUTPINS_FOOBAR5_ | top_COPY_0_COPY_0 | 0 | 0 | 0
 
@@ -1394,188 +549,11 @@ CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | top_COPY_0_COPY_0 | 0 | 0 | 0
 
 CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | top_COPY_0_COPY_0 | 0 | 0 | 0
 
-PLA | FOOBAR1_ | 31
-PLA_TERM | 0 | 
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<3>
-PLA_TERM | 1 | 
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 2 | 
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<3>
-PLA_TERM | 3 | 
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 4 | 
-SPPTERM | 2 | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 5 | 
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3>
-PLA_TERM | 6 | 
-SPPTERM | 2 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<3>
-PLA_TERM | 7 | 
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 8 | 
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<2>
-PLA_TERM | 9 | 
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1>
-PLA_TERM | 10 | 
-SPPTERM | 3 | IV_TRUE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 11 | 
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_TRUE | bcd2<3>
-PLA_TERM | 12 | 
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<3>
-PLA_TERM | 13 | 
-SPPTERM | 2 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<2>
-PLA_TERM | 14 | 
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
-PLA_TERM | 15 | 
-SPPTERM | 2 | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 16 | 
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3>
-PLA_TERM | 17 | 
-SPPTERM | 2 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<3>
-PLA_TERM | 18 | 
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 19 | 
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<2>
-PLA_TERM | 20 | 
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1>
-PLA_TERM | 21 | 
-SPPTERM | 3 | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 22 | 
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_TRUE | bcd1<3>
-PLA_TERM | 23 | 
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<3>
-PLA_TERM | 24 | 
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
-PLA_TERM | 25 | 
-SPPTERM | 2 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<3>
-PLA_TERM | 26 | 
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-PLA_TERM | 27 | 
-SPPTERM | 3 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<2>
-PLA_TERM | 28 | 
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1>
-PLA_TERM | 29 | 
-SPPTERM | 3 | IV_TRUE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-PLA_TERM | 30 | 
-SPPTERM | 3 | IV_FALSE | bcd3<0> | IV_FALSE | bcd3<1> | IV_TRUE | bcd3<3>
-
-PLA | FOOBAR2_ | 18
-PLA_TERM | 0 | 
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 1 | 
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 2 | 
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<3>
-PLA_TERM | 3 | 
-SPPTERM | 3 | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
-PLA_TERM | 4 | 
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-PLA_TERM | 5 | 
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1> | IV_TRUE | bcd3<2>
-PLA_TERM | 6 | 
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<2>
-PLA_TERM | 7 | 
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<3> | IV_FALSE | bcd3<2>
-PLA_TERM | 8 | 
-SPPTERM | 4 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-PLA_TERM | 9 | 
-SPPTERM | 4 | IV_FALSE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
-PLA_TERM | 10 | 
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1>
-PLA_TERM | 11 | 
-SPPTERM | 3 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<3> | IV_TRUE | bcd3<2>
-PLA_TERM | 12 | 
-SPPTERM | 3 | IV_TRUE | bcd3<1> | IV_TRUE | bcd3<3> | IV_TRUE | bcd3<2>
-PLA_TERM | 13 | 
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<2>
-PLA_TERM | 14 | 
-SPPTERM | 4 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
-PLA_TERM | 15 | 
-SPPTERM | 3 | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_FALSE | bcd3<2>
-PLA_TERM | 16 | 
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<3>
-PLA_TERM | 46 | 
-SPPTERM | 2 | IV_FALSE | bcd3<0> | IV_TRUE | bcd3<2>
-
-PLA | FOOBAR3_ | 23
-PLA_TERM | 0 | 
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 1 | 
-SPPTERM | 3 | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
-PLA_TERM | 2 | 
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<3>
-PLA_TERM | 3 | 
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 4 | 
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1> | IV_TRUE | bcd2<2>
-PLA_TERM | 5 | 
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<2>
-PLA_TERM | 6 | 
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 7 | 
-SPPTERM | 4 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 8 | 
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
-PLA_TERM | 9 | 
-SPPTERM | 3 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<3> | IV_TRUE | bcd1<2>
-PLA_TERM | 10 | 
-SPPTERM | 3 | IV_TRUE | bcd1<1> | IV_TRUE | bcd1<3> | IV_TRUE | bcd1<2>
-PLA_TERM | 11 | 
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 12 | 
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<3>
-PLA_TERM | 13 | 
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<2>
-PLA_TERM | 14 | 
-SPPTERM | 3 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 15 | 
-SPPTERM | 3 | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 16 | 
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<2>
-PLA_TERM | 17 | 
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 18 | 
-SPPTERM | 4 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 19 | 
-SPPTERM | 3 | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 22 | 
-SPPTERM | 2 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<3>
-PLA_TERM | 34 | 
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1>
-PLA_TERM | 37 | 
-SPPTERM | 2 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<2>
-
-PLA | FOOBAR4_ | 12
-PLA_TERM | 0 | 
-SPPTERM | 3 | IV_TRUE | bcd3<0> | IV_TRUE | bcd3<3> | IV_FALSE | bcd3<2>
-PLA_TERM | 1 | 
-SPPTERM | 3 | IV_FALSE | bcd3<1> | IV_FALSE | bcd3<3> | IV_TRUE | bcd3<2>
-PLA_TERM | 2 | 
-SPPTERM | 4 | IV_FALSE | bcd1<0> | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 3 | 
-SPPTERM | 3 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<1> | IV_TRUE | bcd1<2>
-PLA_TERM | 4 | 
-SPPTERM | 3 | IV_TRUE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<2>
-PLA_TERM | 5 | 
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_TRUE | bcd2<1> | IV_TRUE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 6 | 
-SPPTERM | 4 | IV_TRUE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_FALSE | bcd2<2>
-PLA_TERM | 7 | 
-SPPTERM | 4 | IV_FALSE | bcd2<0> | IV_FALSE | bcd2<1> | IV_FALSE | bcd2<3> | IV_TRUE | bcd2<2>
-PLA_TERM | 8 | 
-SPPTERM | 4 | IV_TRUE | bcd1<0> | IV_TRUE | bcd1<1> | IV_FALSE | bcd1<3> | IV_TRUE | bcd1<2>
-PLA_TERM | 9 | 
-SPPTERM | 3 | IV_FALSE | bcd1<1> | IV_FALSE | bcd1<3> | IV_FALSE | bcd1<2>
-PLA_TERM | 37 | 
-SPPTERM | 2 | IV_TRUE | bcd3<0> | IV_FALSE | bcd3<1>
-PLA_TERM | 46 | 
-SPPTERM | 2 | IV_TRUE | bcd1<0> | IV_FALSE | bcd1<3>
-
 BUSINFO | D1<6:0> | 7 | 0 | 1 | d1<0> | 6 | d1<1> | 5 | d1<2> | 4 | d1<3> | 3 | d1<4> | 2 | d1<5> | 1 | d1<6> | 0
 BUSINFO | D2<6:0> | 7 | 0 | 1 | d2<0> | 6 | d2<1> | 5 | d2<2> | 4 | d2<3> | 3 | d2<4> | 2 | d2<5> | 1 | d2<6> | 0
 BUSINFO | D3<6:0> | 7 | 0 | 1 | d3<0> | 6 | d3<1> | 5 | d3<2> | 4 | d3<3> | 3 | d3<4> | 2 | d3<5> | 1 | d3<6> | 0
 
 IOSTD | LVCMOS18
-clk | LVCMOS33
 d1<0> | LVCMOS33
 d1<1> | LVCMOS33
 d1<2> | LVCMOS33
@@ -1597,33 +575,7 @@ d3<3> | LVCMOS33
 d3<4> | LVCMOS33
 d3<5> | LVCMOS33
 d3<6> | LVCMOS33
-din | LVCMOS33
 
 
-FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | bcd1<1> | NULL | 1 | bcd2<3> | NULL | 3 | bcd3<2> | NULL | 4 | bcd1<0> | NULL | 6 | bcd2<1> | NULL
-FB_ORDER_OF_INPUTS | FOOBAR1_ | 8 | bcd3<0> | NULL | 9 | bcd3<3> | NULL | 10 | bcd3<1> | NULL | 13 | bcd2<2> | NULL | 14 | bcd1<2> | NULL
-FB_ORDER_OF_INPUTS | FOOBAR1_ | 15 | bcd2<0> | NULL | 21 | bcd1<3> | NULL
 
-FB_IMUX_INDEX | FOOBAR1_ | 68 | 79 | -1 | 75 | 87 | -1 | 77 | -1 | 78 | 64 | 76 | -1 | -1 | 71 | 67 | 69 | -1 | -1 | -1 | -1 | -1 | 70 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
-
-
-FB_ORDER_OF_INPUTS | FOOBAR2_ | 1 | bcd2<3> | NULL | 3 | bcd3<2> | NULL | 6 | bcd2<1> | NULL | 8 | bcd3<0> | NULL | 9 | bcd3<3> | NULL
-FB_ORDER_OF_INPUTS | FOOBAR2_ | 10 | bcd3<1> | NULL | 13 | bcd2<2> | NULL | 15 | bcd2<0> | NULL
-
-FB_IMUX_INDEX | FOOBAR2_ | -1 | 79 | -1 | 75 | -1 | -1 | 77 | -1 | 78 | 64 | 76 | -1 | -1 | 71 | -1 | 69 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
-
-
-FB_ORDER_OF_INPUTS | FOOBAR3_ | 0 | bcd1<1> | NULL | 1 | bcd2<3> | NULL | 3 | bcd2<2> | NULL | 4 | bcd1<0> | NULL | 6 | bcd2<1> | NULL
-FB_ORDER_OF_INPUTS | FOOBAR3_ | 10 | bcd1<2> | NULL | 15 | bcd2<0> | NULL | 21 | bcd1<3> | NULL
-
-FB_IMUX_INDEX | FOOBAR3_ | 68 | 79 | -1 | 71 | 87 | -1 | 77 | -1 | -1 | -1 | 67 | -1 | -1 | -1 | -1 | 69 | -1 | -1 | -1 | -1 | -1 | 70 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
-
-
-FB_ORDER_OF_INPUTS | FOOBAR4_ | 0 | bcd1<1> | NULL | 1 | bcd2<3> | NULL | 3 | bcd3<2> | NULL | 4 | bcd1<0> | NULL | 6 | bcd2<1> | NULL
-FB_ORDER_OF_INPUTS | FOOBAR4_ | 8 | bcd3<0> | NULL | 9 | bcd3<3> | NULL | 10 | bcd3<1> | NULL | 13 | bcd2<2> | NULL | 14 | bcd1<2> | NULL
-FB_ORDER_OF_INPUTS | FOOBAR4_ | 15 | bcd2<0> | NULL | 21 | bcd1<3> | NULL
-
-FB_IMUX_INDEX | FOOBAR4_ | 68 | 79 | -1 | 75 | 87 | -1 | 77 | -1 | 78 | 64 | 76 | -1 | -1 | 71 | 67 | 69 | -1 | -1 | -1 | -1 | -1 | 70 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
-
-
-GLOBAL_FCLK | clk | 0 | 0
+TIME_TSPEC | TS1000 | PERIOD:PERIOD_clk:1000000000.000nS:HIGH:50.000000000:% | PERIOD_clk | 10003 | -2147483648 | 500 | NULL

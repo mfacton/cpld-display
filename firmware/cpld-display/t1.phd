@@ -1,0 +1,108 @@
+" XPLAOPT Version 9.99.99.99
+" Created on Tue Oct  1 17:33:30 2024
+" 21 Mcells, 12 PLApts, 1 Levels, 12 Fanins
+" XPLAOPT -run s -it b -i top.blx -dev XC2C64A-7QFG48 -reg -xor a -mode 1 -th 
+"         28 -fi 32 -bfi 38 -pre keep -unused keeper -terminate keeper -no_output_files 
+MODULE top
+
+	clk  pin 11 ; 
+ 	d1<0>  pin 24 ;  " 1 pt.
+ 	d1<1>  pin 15 ;  " 1 pt.
+ 	d1<2>  pin 14 ;  " 1 pt.
+ 	d1<3>  pin 10 ;  " 1 pt.
+ 	d1<4>  pin 9 ;  " 0 pt.
+ 	d1<5>  pin 8 ;  " 0 pt.
+ 	d1<6>  pin 7 ;  " 0 pt.
+ 	d2<0>  pin 6 ;  " 1 pt.
+ 	d2<1>  pin 5 ;  " 1 pt.
+ 	d2<2>  pin 34 ;  " 1 pt.
+ 	d2<3>  pin 26 ;  " 1 pt.
+ 	d2<4>  pin 44 ;  " 0 pt.
+ 	d2<5>  pin 39 ;  " 0 pt.
+ 	d2<6>  pin 38 ;  " 0 pt.
+ 	d3<0>  pin 37 ;  " 1 pt.
+ 	d3<1>  pin 36 ;  " 1 pt.
+ 	d3<2>  pin 35 ;  " 1 pt.
+ 	d3<3>  pin 33 ;  " 1 pt.
+ 	d3<4>  pin 32 ;  " 0 pt.
+ 	d3<5>  pin 27 ;  " 0 pt.
+ 	d3<6>  pin 25 ;  " 0 pt.
+ 	din  pin 12 ; 
+ 
+
+
+
+xpla property 'USER_SLEW_RATE d2<0> d1<2> d3<0> d2<2> d1<0> d1<1> d2<1> d3<1> d3<2> d3<3> d1<3> 
+	d2<3> d1<6> d1<5> d1<4> d2<6> d2<5> d2<4> d3<6> d3<5> d3<4> '; 
+xpla property 'GLOBAL_CLK clk '; 
+xpla property 'unused_keeper'; 
+xpla property 'timespec  d1<2>.Q d2<0>.D 40518559.000000'; 
+xpla property 'timespec  d2<2>.Q d3<0>.D 40518559.000000'; 
+xpla property 'timespec  d1<0>.Q d1<1>.D 40518559.000000'; 
+xpla property 'timespec  d1<1>.Q d1<2>.D 40518559.000000'; 
+xpla property 'timespec  d2<0>.Q d2<1>.D 40518559.000000'; 
+xpla property 'timespec  d2<1>.Q d2<2>.D 40518559.000000'; 
+xpla property 'timespec  d3<0>.Q d3<1>.D 40518559.000000'; 
+xpla property 'timespec  d3<1>.Q d3<2>.D 40518559.000000'; 
+xpla property 'timespec  d3<2>.Q d3<3>.D 40518559.000000'; 
+xpla property 'timespec  d1<2>.Q d1<3>.D 40518559.000000'; 
+xpla property 'timespec  d2<2>.Q d2<3>.D 40518559.000000'; 
+xpla property 'IOSTD d2<0> 0 -1';
+xpla property 'IOSTD d1<2> 0 -1';
+xpla property 'IOSTD clk 0 -1';
+xpla property 'IOSTD d3<0> 0 -1';
+xpla property 'IOSTD d2<2> 0 -1';
+xpla property 'IOSTD d1<0> 0 -1';
+xpla property 'IOSTD din 0 -1';
+xpla property 'IOSTD d1<1> 0 -1';
+xpla property 'IOSTD d2<1> 0 -1';
+xpla property 'IOSTD d3<1> 0 -1';
+xpla property 'IOSTD d3<2> 0 -1';
+xpla property 'IOSTD d3<3> 0 -1';
+xpla property 'IOSTD d1<3> 0 -1';
+xpla property 'IOSTD d2<3> 0 -1';
+xpla property 'IOSTD d1<6> 0 -1';
+xpla property 'IOSTD d1<5> 0 -1';
+xpla property 'IOSTD d1<4> 0 -1';
+xpla property 'IOSTD d2<6> 0 -1';
+xpla property 'IOSTD d2<5> 0 -1';
+xpla property 'IOSTD d2<4> 0 -1';
+xpla property 'IOSTD d3<6> 0 -1';
+xpla property 'IOSTD d3<5> 0 -1';
+xpla property 'IOSTD d3<4> 0 -1';
+EQUATIONS 
+
+ d1<0>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<0>.D = din;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<1>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<1>.D = d1<0>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<2>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<2>.D = d1<1>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<3>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<3>.D = d1<2>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d1<4> = 0;
+ d1<5> = 0;
+ d1<6> = 0;
+ d2<0>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<0>.D = d1<2>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<1>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<1>.D = d2<0>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<2>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<2>.D = d2<1>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<3>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<3>.D = d2<2>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d2<4> = 0;
+ d2<5> = 0;
+ d2<6> = 0;
+ d3<0>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<0>.D = d2<2>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<1>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<1>.D = d3<0>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<2>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<2>.D = d3<1>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<3>.CLK = clk;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<3>.D = d3<2>.Q;		"--- [PT=1, FI=1, LVL=1] ---
+ d3<4> = 0;
+ d3<5> = 0;
+ d3<6> = 0;
+END

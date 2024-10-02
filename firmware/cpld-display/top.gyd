@@ -1,15 +1,13 @@
 Pin Freeze File:  version P.20131013
 
 2C64A48 XC2C64A-7-QFG48
-clk S:PIN11
-din S:PIN12
-d1<0> S:PIN37
-d1<1> S:PIN36
-d1<2> S:PIN35
-d1<3> S:PIN33
-d1<4> S:PIN32
-d1<5> S:PIN27
-d1<6> S:PIN25
+d1<0> S:PIN24
+d1<1> S:PIN15
+d1<2> S:PIN14
+d1<3> S:PIN10
+d1<4> S:PIN9
+d1<5> S:PIN8
+d1<6> S:PIN7
 d2<0> S:PIN6
 d2<1> S:PIN5
 d2<2> S:PIN34
@@ -17,35 +15,31 @@ d2<3> S:PIN26
 d2<4> S:PIN44
 d2<5> S:PIN39
 d2<6> S:PIN38
-d3<0> S:PIN24
-d3<1> S:PIN15
-d3<2> S:PIN14
-d3<3> S:PIN10
-d3<4> S:PIN9
-d3<5> S:PIN8
-d3<6> S:PIN7
+d3<0> S:PIN37
+d3<1> S:PIN36
+d3<2> S:PIN35
+d3<3> S:PIN33
+d3<4> S:PIN32
+d3<5> S:PIN27
+d3<6> S:PIN25
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 bcd3<3> d2<1>
-PARTITION FB1_4 bcd1<2> bcd1<1> bcd2<0> bcd1<3>
-		 bcd2<2>
-PARTITION FB1_12 bcd3<2> bcd3<1> bcd2<1> bcd3<0>
-		 bcd2<3>
-PARTITION FB2_1 d2<0> d3<6> d3<5> d3<4>
-		 d3<3>
-PARTITION FB2_8 bcd1<0>
-PARTITION FB2_12 d3<2> d3<1>
+PARTITION FB1_2 d2<1>
+
+PARTITION FB2_1 d2<0> d1<6> d1<5> d1<4>
+		 d1<3>
+PARTITION FB2_12 d1<2> d1<1>
 
 PARTITION FB3_2 d2<4>
 PARTITION FB3_5 d2<5> d2<6>
-PARTITION FB3_9 d1<0> d1<1> d1<2> d2<2>
+PARTITION FB3_9 d3<0> d3<1> d3<2> d2<2>
 		
-PARTITION FB3_14 d1<3> d1<4>
+PARTITION FB3_14 d3<3> d3<4>
 
-PARTITION FB4_10 d3<0> d1<6> d2<3> d1<5>
+PARTITION FB4_10 d1<0> d3<6> d2<3> d3<5>
 		
 
 

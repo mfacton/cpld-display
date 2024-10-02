@@ -2,9 +2,11 @@
 
 module bcd_display(in, out);
 input [3:0]in;
-output reg [6:0]out;
+output [6:0]out;
 
+assign out[3:0] = in;
 
+/*
 always @(*) begin
 case (in)
 	4'b0000: out = 7'b0111111;
@@ -21,11 +23,12 @@ case (in)
 	// other digits
 	4'b1010: out = 7'b1110111;
 	4'b1011: out = 7'b1111100;
-	4'b1100: out = 7'b1111001;
+	4'b1100: out = 7'b0111001;
 	4'b1101: out = 7'b1011110;
 	4'b1110: out = 7'b1111001;
 	4'b1111: out = 7'b1110001;
 endcase
 end
+*/
 
 endmodule

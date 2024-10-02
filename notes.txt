@@ -24,6 +24,10 @@ sudo apt-get install openfpgaloader
 sudo apt-get install ftdi-eeprom
 sudo apt remove brltty
 
+sudo ln /opt/Xilinx/Vivado/2024.1/lib/lnx64.o/libtcl8.6.so /opt/Xilinx/Vivado/2024.1/lib/lnx64.o/libtcl8.5.so
+
+/home/mfact/Toolchain/fpga-loader/build/openFPGALoader -c ft232 --bitstream top.jed
+
 ls -l /dev/ttyUSB0
 sudo usermod -aG plugdev $USER
 
